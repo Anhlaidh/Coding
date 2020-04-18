@@ -13,17 +13,28 @@ public class Count {
 
     /**
      * 计数
-     * @param num 输入的参数
+     * @param n 输入的参数
      * @return 所有可能的数量
      */
-    public static int count(int num) {
-        int result = 0;
-        if (num==1) return 1;
-        for (int i = num-1; i >0;i--) {
-            result += count(num-i);
+    public static int count(int n) {
+        return count(n, n);
+
+    }
+
+    private static int count(int n, int m) {
+        if (n < 1 || m < 1) {
+            return 0;
+        }
+        if (n == 1 || m == 1) {
+            return 1;
+        }
+        if (n < m) {
+            return count(n, n);
+        }
+        if (n == m) {
+            return count(n, m - 1) + 1;
 
         }
-        return result;
-
+        return count(n, m - 1) + count(n - m, m);
     }
 }

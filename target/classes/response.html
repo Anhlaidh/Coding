@@ -1,0 +1,1559 @@
+
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="" content="">
+    <title>ZIP Code™ 查找 | USPS</title>
+    <link rel="stylesheet" href="/styles/libs/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/styles/default-styles.css"/>
+    <link rel="stylesheet" href="/styles/main-zip-code.css"/>
+    <link rel="stylesheet" href="/styles/footer-sb.css"/>
+    <link rel="stylesheet" href="/styles/main-sb.css"/>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <style type="text/css">
+        #shortcuts-menu-wrapper {
+            height: auto !important;
+        }
+    </style>
+    <meta http-equiv="Content-Language" content="zh-cn"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href='/_onelink_/usps/onelink.css' rel='stylesheet' type='text/css'/> <!-- OneLink -->
+    <link href='/_onelink_/usps/css/speedbump.css' rel='stylesheet' type='text/css'/> <!-- OneLink -->
+    <link href='/_onelink_/usps/en2zh/onelink.css' rel='stylesheet' type='text/css'/> <!-- OneLink -->
+    <link href='/_onelink_/usps/css/speedbump/jquery-ui-1.8.15.custom.css' rel='stylesheet' type='text/css'/> <!-- OneLink -->
+    <!-- agent type: HTTPie/0.9.2, IsSafari=0, IsFF=0, IsMAC=0, IsPC=0, IsChrome=0 --> <!-- OneLink -->
+    <style type="text/css" media="all">
+        .OneLinkNOP { }
+        .OneLinkPoweredBy { width: 893px; padding: 0px 0px 0px 0px; text-align: right; height: 68px; }
+        .OneLinkNoTx { /* no-op */ }
+        .OneLinkHide { display:none !important; }
+        .OneLinkHide_zh { display:none !important; }
+        .OneLinkShow { display:inline !important; }
+        .OneLinkShow_zh { display:inline !important; }
+        .OneLinkTxShow { display:inline !important; }
+        .OneLinkTxShow_zh { display:inline !important; }
+    </style>
+</head>
+<body style="display:none;">
+
+<!-- GLOBAL HEADER-->
+<div id="global-header">
+    <div id="localgeheader" w3-include-html="/global-elements/header/ZIPCODELOOKUP-header.htm" class="hide"></div>
+    <div w3-include-html="/global-elements/navigation/TOOLS-navigation.htm" class="hide"></div>
+    <link href="/global-elements/header/css/megamenu-v2.css" type="text/css" rel="stylesheet">
+    <style>
+        body{min-width:0!important;overflow-x:hidden;}
+        a{text-decoration:none;}
+
+
+
+        @media (min-width: 958px){div#g-navigation{margin-bottom: 0px!important;}}
+        @media (min-width: 958px){.global--navigation~.g-alert, .g-alert~.g-alert, .g-alert {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+            div#g-navigation {
+                margin-bottom: 0;
+            }
+        }
+        /*
+
+        .hidden-galert {
+           position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 958px) {
+        .g-alert p br { display:none;}
+        }
+
+        */
+
+
+        /* Updating CSS to account for the new Help direction */
+        @media (min-width: 959px){
+            .global--navigation nav a.help-faq {
+                display:none;
+            }
+        }
+        @media (max-width: 958px){
+            .global--navigation nav ul.nav-list li.menuheader:nth-of-type(7) {
+                display:none;
+            }
+            a.help-faq {
+                display: block;
+                text-align: left;
+                color: #336;
+                text-decoration: none;
+                padding: 20px 10px 20px 30px;
+                width: 100%;
+                font-size: 16px;
+                font-family: "HelveticaNeueW02-75Bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-weight: 400;
+                border-bottom: 1px solid #333366;
+                position: relative;
+                box-sizing: border-box;
+            }
+        }
+
+
+
+
+    </style>
+    <script>var appID = "Phoenix";</script>
+    <div class="nav-utility" id="nav-utility">
+        <div class="utility-links" id="utility-header">
+            <a tabindex="-1" href="https://zh.usps.com/globals/site-index.htm" class="hidden-skip">访问 USPS.com 网站目录。</a> <a tabindex="-1" id="skiptomain" href="#endnav" class="hidden-skip">跳过所有页面导航。</a> <a tabindex="-1" name="skiputil" id="skiputil" href="#skipallnav" class="hidden-skip">跳过所有工具导航</a>
+            <div class="lang-select">
+                <a id="link-lang" href="#">
+                    <span class="visuallyhidden">当前语言：</span> 英语
+                </a>
+                <ul class="lang-list">
+                    <li class="lang-option">
+                        <a class="multi-lang-link" tabindex="-1" href="javascript:OneLink('en');">英语</a>
+                    </li>
+                    <li class="lang-option">
+                        <a class="multi-lang-link" tabindex="-1" href="javascript:OneLink('es');">西班牙语</a>
+                    </li>
+                    <li class="lang-option last">
+                        <a class="multi-lang-link" tabindex="-1" href="javascript:OneLink('zh');" class="chinese"><span class="visuallyhidden">中文</span></a>
+                    </li>
+                </ul>
+            </div>
+            <a id="link-locator" href="https://zh-tools.usps.com/find-location.htm">地点</a> <a id="link-customer" href="https://zh.usps.com/help/contact-us.htm">支持</a> <a id="link-myusps" href="https://informeddelivery.usps.com">Informed Delivery</a> <a id="login-register-header" class="link-reg" href="https://zh-reg.usps.com/entreg/LoginAction_input?app=Phoenix&amp;appURL=/">注册/登录</a>
+            <div id="link-cart" style="display: inline-block;"></div>
+        </div>
+    </div>
+    <div class="global--navigation" id="g-navigation">
+        <a tabindex="-1" name="skipallnav" id="skipallnav" href="#endnav" class="hidden-skip">跳过所有类别导航链接</a>
+        <div class="nav-full">
+            <a class="global-logo" href="https://zh.usps.com/">
+                <img src="https://zh.usps.com/global-elements/header/images/utility-header/logo-sb.svg" alt="USPS.com 徽标图片。" aria-label="Image of USPS.com logo." />
+            </a>
+            <div class="mobile-header">
+                <a class="mobile-hamburger" href="#"><img src="https://zh.usps.com/assets/images/home/hamburger.svg" alt="汉堡菜单图标"></a>
+                <a class="mobile-logo"  href="https://zh.usps.com/"><img src="https://zh.usps.com/assets/images/home/logo_mobile.svg" alt="USPS Mobile 徽标"></a>
+                <a class="mobile-search"  href="#"><img src="https://zh.usps.com/assets/images/home/search.svg" alt="搜索图标"></a>
+            </div>
+
+            <nav>
+                <div class="mobile-log-state">
+                    <div id="msign" class="mobile-utility">
+                        <div class="mobile-sign">
+                            <a href="https://zh-reg.usps.com/entreg/LoginAction_input?app=Phoenix&amp;appURL=">登录</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class='nav-list' role="menubar">
+                    <li class="qt-nav menuheader">
+                        <a tabindex="-1" name="navquicktools" id="navquicktools" href="#navmailship" class="hidden-skip">跳过快速工具链接</a> <a aria-expanded="false" role="menuitem" tabindex="0" aria-haspopup="true" class="nav-first-element menuitem" href="#">快速工具</a>
+                        <div class="">
+                            <ul role="menu" aria-hidden="true">
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://zh-tools.usps.com/go/TrackConfirmAction_input">
+                                        <img src="https://zh.usps.com/assets/images/home/tracking.svg" alt="追踪图标">
+                                        <p>追踪包裹</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://informeddelivery.usps.com/">
+                                        <img src="https://zh.usps.com/global-elements/header/images/utility-header/mailman.svg" alt="Informed Delivery 图标">
+                                        <p>通知投递 </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://zh-tools.usps.com/find-location.htm">
+                                        <img src="https://zh.usps.com/assets/images/home/location.svg" alt="邮局查找器图标">
+                                        <p>查找 USPS 地点</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/browse/category.jsp?categoryId=buy-stamps">
+                                        <img src="https://zh.usps.com/assets/images/home/stamps.svg" alt="邮票图标">
+                                        <p>购买邮票</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://zh-tools.usps.com/schedule-pickup-steps.htm">
+                                        <img src="https://zh.usps.com/assets/images/home/schedule_pickup.svg" alt="安排取件图标">
+                                        <p>安排取件</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://postcalc.usps.com/">
+                                        <img src="https://zh.usps.com/assets/images/home/calculate_price.svg" alt="计算价格图标">
+                                        <p>计算价格</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://zh-tools.usps.com/go/ZipLookupAction_input">
+                                        <img src="https://zh.usps.com/assets/images/home/find_zip.svg" alt="Zip Code™ 查找图标">
+                                        <p>查找 <br>ZIP Code<sup>™</sup>（邮区编码）</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://zh-holdmail.usps.com/holdmail/">
+                                        <img src="https://zh.usps.com/assets/images/home/holdmail.svg" alt="留交邮件图标">
+                                        <p>留交邮件</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://moversguide.usps.com/?referral=MG82">
+                                        <img src="https://zh.usps.com/assets/images/home/change_address.svg" alt="地址变更图标">
+                                        <p>更改我的地址</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://zh.usps.com/manage/po-boxes.htm">
+                                        <img src="https://zh.usps.com/assets/images/home/po_box.svg" alt="邮政信箱图标">
+                                        <p>租用/续租 <br>PO Box（邮政信箱）</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/browse/category.jsp?categoryId=shipping-supplies">
+                                        <img src="https://zh.usps.com/assets/images/home/free_boxes.svg" alt="寄件物资供应图标">
+                                        <p>免费包装盒</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="https://cns.usps.com/">
+                                        <img src="https://zh.usps.com/assets/images/home/featured_clicknship.svg" alt="Click-N-Ship 服务图标">
+                                        <p>Click-N-Ship</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li  class="menuheader" >
+                        <a tabindex="-1" name="navmailship" id="navmailship" href="#navtrackmanage" class="hidden-skip">跳过寄件和邮寄链接</a> <a id="mail-ship-width" aria-expanded="false" class="menuitem" role="menuitem" tabindex="0" aria-haspopup="true" href="https://zh.usps.com/ship/">寄件和邮寄</a>
+                        <div class="repos">
+                            <ul role="menu" aria-hidden="true" class="tools">
+                                <h3>工具</h3>
+                                <li class="tool-cns">
+                                    <a role="menuitem" tabindex="-1"  href="https://cns.usps.com/">Click-N-Ship</a>
+                                </li>
+                                <li class="tool-stamps">
+                                    <a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/">邮票及物资供应</a>
+                                </li>
+                                <li class="tool-calc">
+                                    <a role="menuitem" tabindex="-1"  href="https://postcalc.usps.com/">计算价格</a>
+                                </li>
+                                <li class="tool-pick">
+                                    <a role="menuitem" tabindex="-1"  href="https://zh-tools.usps.com/schedule-pickup-steps.htm">安排取件</a>
+                                </li>
+                                <li class="tool-zip">
+                                    <a role="menuitem" tabindex="-1"  href="https://zh-tools.usps.com/go/ZipLookupAction_input">查找 ZIP Code<sup>™</sup>（邮区编码）</a>
+                                </li>
+                                <li class="tool-find">
+                                    <a role="menuitem" tabindex="-1"  href="https://zh-tools.usps.com/find-location.htm">查找 USPS 地点</a>
+                                </li>
+                            </ul>
+                            <ul role="menu" aria-hidden="true">
+                                <h3>了解</h3>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/">邮寄</a></li>
+                                <ul>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/letters.htm">正在发送邮件</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/packages.htm">寄送包裹</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/insurance-extra-services.htm">保险与额外服务</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/shipping-restrictions.htm">邮寄限制</a></li>
+                                </ul>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/online-shipping.htm">在线寄件</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/label-broker.htm">标签经纪人</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/custom-mail-stamps.htm">自定义邮件、邮票和信封</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/help/missing-mail.htm">寻找丢失的邮件</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/help/claims.htm">提出索赔</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/help/refunds.htm">申请退款</a></li>
+                            </ul>
+                            <ul role="menu" aria-hidden="true">
+                                <h3 class="desktop-only">&nbsp;</h3>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/mail-shipping-services.htm">邮件及寄件服务</a></li>
+                                <ul>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/priority-mail-express.htm">Priority Mail Express</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/priority-mail.htm">Priority Mail</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/first-class-mail.htm">First-Class Mail（普通邮件）</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/apo-fpo-dpo.htm">军事及外交邮件</a></li>
+                                </ul>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/shop/money-orders.htm">邮政汇票</a></li>
+                                <div class="desktop-only mailship-addition"><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/go-now.htm"><img src="https://zh.usps.com/ship/go-now.png" alt="带行动号召的邮寄图片。" /></a></div>
+                            </ul>
+                            <form method="get" class="search global-header--search" tabindex="-1" action="https://zh.usps.com/search">
+			<span aria-hidden="false" tabindex="-1" class="input--wrap">
+				<label tabindex="-1" class="visuallyhidden"  for="global-header--search-track-mail-ship">搜索 USPS.com</label>
+				<input  tabindex="-1"  autocomplete="off" placeholder="搜索或输入追踪编号" class="search--track-input input--field q global-header--search-track" id="global-header--search-track-mail-ship" maxlength="256" name="q" type="text">
+				<div class="autocorrect"><ul></ul></div>
+				<input tabindex="-1"  value="Search" class="input--search search--submit" type="submit">
+			</span>
+                            </form>
+                        </div>
+                    </li>
+                    <li  class="menuheader" >
+                        <a tabindex="-1" name="navtrackmanage" id="navtrackmanage" href="#navpostalstore" class="hidden-skip">跳过追踪和管理链接</a> <a aria-expanded="false" class="menuitem" role="menuitem" tabindex="0" aria-haspopup="true" href="https://zh.usps.com/manage/">追踪和管理</a>
+                        <div>
+                            <ul role="menu" aria-hidden="true" class="tools">
+                                <h3>工具</h3>
+                                <li class="tool-track"><a role="menuitem" tabindex="-1" href="https://zh-tools.usps.com/go/TrackConfirmAction_input">追踪</a></li>
+                                <li class="tool-informed"><a role="menuitem" tabindex="-1" href="https://informeddelivery.usps.com">通知投递 </a></li>
+                                <li class="tool-intercept"><a role="menuitem" tabindex="-1" href="https://retail-pi.usps.com/retailpi/actions/index.action">包裹拦截</a></li>
+                                <li class="tool-redelivery"><a role="menuitem" tabindex="-1" href="https://zh-redelivery.usps.com/redelivery/">安排再次投递</a></li>
+                                <li class="tool-hold"><a role="menuitem" tabindex="-1" href="https://zh-holdmail.usps.com/holdmail/">留交邮件</a></li>
+                                <li class="tool-change"><a role="menuitem" tabindex="-1" href="https://moversguide.usps.com/?referral=MG80">地址变更</a></li>
+                                <li class="tool-pobol"><a role="menuitem" tabindex="-1" href="https://zh.usps.com/manage/po-boxes.htm">租用或续租邮政信箱</a></li>
+                            </ul>
+                            <ul role="menu" aria-hidden="true">
+                                <h3>了解</h3>            <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/manage/">管理邮件基本信息</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/manage/forward.htm">转发邮件</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://informeddelivery.usps.com/">通知投递 </a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/manage/package-intercept.htm">重新投递包裹</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/manage/po-boxes.htm">邮政信箱</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/manage/mailboxes.htm">邮箱指南</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/manage/mail-for-deceased.htm">已故人员邮件</a></li>
+                                <div class="desktop-only manage-addition"><a role="menuitem" tabindex="-1" href="https://zh.usps.com/manage/go-now.htm"><img src="https://zh.usps.com/manage/go-now.png" alt="带行为召唤的管理图片。" /></a></div>
+                            </ul>
+                            <form tabindex="-1" role="search" method="get" class="search global-header--search  track-manage" action="https://zh.usps.com/search">
+			<span tabindex="-1" aria-hidden="false" class="input--wrap">
+				<label  tabindex="-1" class="visuallyhidden"  for="global-header--search-track-track-manage">搜索 USPS.com</label>
+				<input tabindex="-1" autocomplete="off" placeholder="搜索或输入追踪编号" class="search--track-input input--field q global-header--search-track" id="global-header--search-track-track-manage" maxlength="256" name="q" type="text">
+				<div class="autocorrect"><ul></ul></div>
+				<input tabindex="-1" value="Search" class="input--search search--submit" type="submit">
+			</span>
+                            </form>
+                        </div>
+                    </li>
+                    <li  class="menuheader" >
+                        <a tabindex="-1" name="navpostalstore" id="navpostalstore" href="#navbusiness" class="hidden-skip">跳过 Postal Store 链接</a> <a aria-expanded="false" class="menuitem" role="menuitem" tabindex="0" aria-haspopup="true" href="https://zh-store.usps.com/store">Postal Store</a>
+                        <div class="repos">
+                            <ul role="menu" aria-hidden="true" class="tools">
+                                <h3>商店</h3>
+
+
+                                <li class="tool-stamps"><a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/browse/category.jsp?categoryId=buy-stamps">邮票</a></li>
+                                <li class="tool-supplies"><a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/browse/category.jsp?categoryId=shipping-supplies">邮件物资供应</a></li>
+                                <li class="tool-cards"><a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/browse/category.jsp?categoryId=cards-envelopes">卡片及信封</a></li>
+                                <li class="tool-pse"><a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/pse/">个性化邮资已付信封</a></li>
+                                <li class="tool-coll"><a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/browse/category.jsp?categoryId=stamp-collectors">收藏家</a></li>
+                                <li class="tool-gifts"><a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/browse/category.jsp?categoryId=stamp-gifts">礼物</a></li>
+                                <li class="tool-business"><a role="menuitem" tabindex="-1" href="https://zh-store.usps.com/store/results/business/_/N-1y2576k">商务耗材</a></li>
+                            </ul>
+
+                            <ul role="menu" aria-hidden="true">
+                                <h3>了解</h3>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/shop/money-orders.htm">邮政汇票</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/shop/returns-exchanges.htm">退换货</a></li>
+                                <div class="desktop-only shop-addition">
+                                    <a role="menuitem" tabindex="-1" href="https://zh.usps.com/store/go-now.htm"><img src="https://zh.usps.com/store/go-now.png" alt="带行为召唤的商店图片。"/></a>
+                                </div>
+                            </ul>
+                            <form tabindex="-1" role="search" method="get" class="search global-header--search" action="https://zh.usps.com/search">
+			<span tabindex="-1" aria-hidden="false" class="input--wrap">
+				<label class="visuallyhidden" tabindex="-1"  for="global-header--search-track-store">搜索 The Postal Store：关键字或 SKU</label>
+				<input tabindex="-1" autocomplete="off" placeholder="搜索 The Postal Store：关键字或 SKU" class="search--track-input input--field q global-header--search-track" id="global-header--search-track-store" maxlength="256" name="q" type="text">
+				<div class="autocorrect"><ul></ul></div>
+				<input tabindex="-1" value="Search" class="input--search search--submit" type="submit">
+			</span>
+                            </form>
+                        </div>
+                    </li>
+                    <li  class="menuheader" >
+                        <a tabindex="-1" name="navbusiness" id="navbusiness" href="#navinternational" class="hidden-skip">跳过业务链接</a> <a aria-expanded="false" class="menuitem" tabindex="0" aria-haspopup="true" role="menuitem" href="https://zh.usps.com/business/">业务</a>
+                        <div class="repos">
+                            <ul role="menu" aria-hidden="true" class="tools">
+                                <h3>工具</h3>
+                                <li class="tool-calc"><a role="menuitem" tabindex="-1" href="https://dbcalc.usps.com/">计算业务价格</a></li>
+                                <li class="tool-eddm"><a role="menuitem" tabindex="-1" href="https://eddm.usps.com/eddm/customer/routeSearch.action">Every Door Direct Mail（挨门直邮）</a></li>
+                                <div class="desktop-only business-addition">
+                                    <a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/go-now.htm"><img src="https://zh.usps.com/business/go-now.png" alt="带行为召唤的业务图片。"/></a>
+                                </div>
+                            </ul>
+
+                            <ul role="menu" aria-hidden="true">
+                                <h3>了解</h3>
+
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/business-shipping.htm">商业寄件</a></li>
+                                <ul>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/shipping-consolidators.htm">寄送代理人</a></li>
+                                </ul>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/advertise-with-mail.htm">邮件广告</a></li>
+                                <ul>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/every-door-direct-mail.htm">使用挨门直邮（EDDM）</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/vendors.htm">邮寄和打印服务</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/customized-direct-mail.htm">直邮定制服务</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/political-mail.htm">政治邮件</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/promotions-incentives.htm">促销和优惠</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/informed-delivery.htm">Informed Delivery 营销</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/product-samples.htm">产品样品</a></li>
+                                </ul>
+                            </ul>
+                            <ul role="menu" aria-hidden="true">
+                                <h3 class="desktop-only">&nbsp;</h3>
+
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/postage-options.htm">邮资选项</a></li>
+                                <ul>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/verify-postage.htm">核实邮资</a></li>
+                                </ul>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/return-services.htm">退回服务</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/label-broker.htm">标签经纪人</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/international-shipping.htm">国际商务运输</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/manage-mail.htm">管理商业邮件</a></li>
+
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/web-tools-apis/">网络工具 (API)</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/business/prices.htm">价格</a></li>
+                            </ul>
+                            <form tabindex="-1"  role="search" method="get" class="search global-header--search business-bottom" action="https://zh.usps.com/search">
+			<span tabindex="-1" aria-hidden="false" class="input--wrap">
+				<label tabindex="-1" class="visuallyhidden"  for="global-header--search-track-business">搜索 USPS.com</label>
+				<input tabindex="-1" autocomplete="off" placeholder="搜索或输入追踪编号" class="search--track-input input--field q global-header--search-track" id="global-header--search-track-business" maxlength="256" name="q" type="text">
+				<div class="autocorrect"><ul></ul></div>
+				<input tabindex="-1" value="Search" class="input--search search--submit" type="submit">
+			</span>
+                            </form>
+                        </div>
+                    </li>
+                    <li  class="menuheader" >
+                        <a tabindex="-1" name="navinternational" id="navinternational" href="#navhelp" class="hidden-skip">跳过国际链接</a> <a class="menuitem" tabindex="0" aria-expanded="false" aria-haspopup="true" role="menuitem" href="https://zh.usps.com/international/">国际</a>
+                        <div class="repos">
+                            <ul role="menu" aria-hidden="true" class="tools">
+                                <h3>工具</h3>
+
+                                <li class="tool-calc"><a role="menuitem" tabindex="-1" href="https://ircalc.usps.com/">计算国际价格</a></li>
+                                <li class="tool-international-labels"><a role="menuitem" tabindex="-1" href="https://cns.usps.com/">打印国际标签</a></li>
+                                <div class="desktop-only international-addition">
+                                    <a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/go-now.htm"><img src="https://zh.usps.com/international/go-now.png" alt="带行为召唤的国际图片" /></a>
+                                </div>
+                            </ul>
+
+                            <ul role="menu" aria-hidden="true">
+                                <h3>了解</h3>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/international-how-to.htm">打印和寄送国际邮件</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/mail-shipping-services.htm">国际邮件服务</a></li>
+                                <ul>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/gxg.htm">Global Express Guaranteed</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/priority-mail-express-international.htm">Priority Mail Express International</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/priority-mail-international.htm">Priority Mail International</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/first-class-mail-international.htm">First-Class Mail International</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/insurance-extra-services.htm">国际保险与额外服务</a></li>
+                                </ul>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/preparing-international-shipments.htm">寄送国际发货</a></li>
+                                <ul>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/shipping-restrictions.htm">邮寄限制</a></li>
+                                </ul>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/customs-forms.htm">完成海关表格</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/ship/apo-fpo-dpo.htm?pov=international">军事及外交邮件</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/money-transfers.htm">境外汇钱</a></li>
+                                <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/international/passports.htm">护照</a></li>
+                            </ul>
+                            <form tabindex="-1" role="search" method="get" class="search global-header--search" action="https://zh.usps.com/search">
+			<span tabindex="-1" aria-hidden="false" class="input--wrap">
+				<label tabindex="-1" class="visuallyhidden"  for="global-header--search-track-international">搜索 USPS.com</label>
+				<input tabindex="-1" autocomplete="off" placeholder="搜索或输入追踪编号" class="search--track-input input--field q global-header--search-track" id="global-header--search-track-international" maxlength="256" name="q" type="text" />
+				<div class="autocorrect"><ul></ul></div>
+				<input  tabindex="-1" value="Search" class="input--search search--submit" type="submit" />
+			</span>
+                            </form>
+                        </div>
+                    </li>
+                    <li  class="menuheader" >
+                        <a tabindex="-1" name="navhelp" id="navhelp" href="#navsearch" class="hidden-skip">跳过帮助链接</a> <a aria-expanded="false" class="menuitem" tabindex="0" aria-haspopup="true" role="menuitem" href="https://zh-faq.usps.com/s/">帮助</a>
+
+                    </li>
+                    <li class="nav-search menuheader">
+                        <a tabindex="-1" name="navsearch" id="navsearch" href="#endnav" class="hidden-skip">跳过搜索</a> <a aria-expanded="false" class="menuitem" tabindex="0" aria-haspopup="true" role="menuitem" href="#">搜索 USPS.com</a>
+                        <div class="repos">
+                            <!-- Search -->
+                            <span aria-hidden="false" class="input--wrap-label">
+			<label class="visuallyhidden" for="styleguide-header--search-track">搜索 USPS.com</label>
+		</span>
+
+                            <form tabindex="-1"  role="search" method="get" class="search global-header--search" action="https://zh.usps.com/search/results.htm?PNO=1&keyword=">
+			<span tabindex="-1" aria-hidden="false" class="input--wrap">
+				<label tabindex="-1" class="visuallyhidden"  for="global-header--search-track-search">搜索 USPS.com</label>
+				<input tabindex="-1" autocomplete="off" placeholder="搜索或输入追踪编号" class="search--track-input input--field q global-header--search-track" id="global-header--search-track-search" maxlength="256" name="q" type="text" />
+				<div class="autocorrect"><ul></ul></div>
+				<input tabindex="-1" value="Search" class="input--search search--submit" type="submit" />
+			</span>
+                            </form>
+
+                            <div class="empty-search">
+                                <p>热门搜索</p>
+                                <ul>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/search/results.htm?PNO=1&keyword=PO%20Boxes">邮政信箱</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/search/results.htm?PNO=1&keyword=Passports">护照</a></li>
+                                    <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/search/results.htm?PNO=1&keyword=Free%20Boxes">免费包装盒</a></li>
+                                </ul>
+                            </div>
+                            <!-- END Search -->
+                        </div>
+                    </li>
+
+                </ul>
+                <a class="help-faq" href="https://zh-faq.usps.com/s/">帮助</a>
+            </nav>
+
+
+            <div class="search--wrapper-hidden" id="search--display">
+			<span aria-hidden="false" class="input--wrap-label">
+			</span>
+                <form role="search" method="get" class="search global-header--search" action="https://zh.usps.com/search/results.htm?PNO=1&keyword=">
+			<span aria-hidden="false" class="input--wrap">
+				<div class="easy-autocomplete search-box">
+					<label class="visuallyhidden" for="global-header--search-track-mob-search">输入检索词在 USPS.com 中进行搜索</label>
+					<input autocomplete="off" placeholder="搜索或输入追踪编号" class="search--track-input input--field q fsrVisible global-header--search-track" id="global-header--search-track-mob-search" maxlength="256" name="q" type="text" />
+					<input value="Search" class="input--search search--submit" type="submit" />
+				</div>
+                    <div class="autocorrect"><ul></ul></div>
+			</span>
+                </form>
+
+                <div class="empty-search">
+                    <p>热门搜索</p>
+                    <ul>
+                        <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/search/results.htm?PNO=1&keyword=PO%20Boxes">邮政信箱</a></li>
+                        <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/search/results.htm?PNO=1&keyword=Passports">护照</a></li>
+                        <li><a role="menuitem" tabindex="-1" href="https://zh.usps.com/search/results.htm?PNO=1&keyword=Free%20Boxes">免费包装盒</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a name="endnav" id="endnav" href="#" class="hidden-skip">&nbsp;</a>
+        </div></div>
+
+    <script type="text/javascript" src="/global-elements/footer/script/jquery-3.2.1.js"></script>
+    <script src="/global-elements/lib/script/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="/global-elements/header/script/megamenu.js"></script>
+    <script type="text/javascript" src="https://zh.usps.com/ContentTemplates/common/scripts/OneLinkUsps.js"></script>
+    <script type="text/javascript" src="/global-elements/header/script/ge-login.js"></script>
+    <script src="/global-elements/lib/script/requirejs/require.js"></script>
+    <script src="/global-elements/header/script/header-init-search.js"></script>
+    <script src="https://zh.usps.com/assets/script/home/megamenu-additions.js"></script>
+
+</div>
+<!-- END GLOBAL HEADER -->
+
+
+<div class="zip_code_container" id="zip-lookup-welcome">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 main-header landing">
+                <h1>查找 ZIP Code<sup>™</sup>（邮区编码）</h1>
+                <a href="https://zh.usps.com/faqs/ziplookup-faqs.htm" target="_blank" class="header-faqs">FAQs（常见问题回答）</a>
+            </div>
+
+
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <!--<p class="zip-code-header-text">You can find ZIP Codes<sup>&trade;</sup> for corporate and residential addresses or find the cities that fall within a ZIP Code<sup>&trade;</sup>.</p>-->
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 three-column-wrapper">
+                <div class="col-md-4 col-sm-4 col-xs-12 zip-code-column one">
+                    <div class="link-header-holder">
+                        <a href="/zip-code-lookup.htm?byaddress" data-location="byaddress" role="button" class="zip-code-address zip-code-home">按地址</a>
+                    </div>
+
+                    <p class="column-one-text">输入一个公司或居住街道地址、城市名称和州名以查看具体的 ZIP Code<sup>™</sup>邮区编码。</p>
+                    <a href="/zip-code-lookup.htm?byaddress" data-location="byaddress" role="button" class="btn-primary zip-code-home">按地址查找</a>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 zip-code-column two">
+                    <div class="link-header-holder">
+                        <a href="/zip-code-lookup.htm?bycitystate" data-location="bycitystate" role="button" class="zip-code-state zip-code-home">按城市名称和州名 </a>
+                    </div>
+                    <p class="column-two-text">输入城市名称和州名以查看此城市的所有 ZIP Codes<sup>™</sup> 邮区编码。</p>
+                    <a href="/zip-code-lookup.htm?bycitystate" data-location="bycitystate" role="button" class="btn-primary zip-code-home">按城市名称和州名查找</a>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 zip-code-column three">
+                    <div class="link-header-holder">
+                        <a href="/zip-code-lookup.htm?citybyzipcode" data-location="citybyzipcode" role="button"  class="zip-code-cities zip-code-home">按 ZIP Code<sup>™</sup> 邮区编码查找城市</a>
+                    </div>
+                    <p class="column-three-text">输入 ZIP Code<sup>™</sup>邮区编码以查看该邮区编码所覆盖的城市。</p>
+                    <a href="/zip-code-lookup.htm?citybyzipcode" data-location="citybyzipcode" role="button" class="btn-primary zip-code-home">按邮区编码查找城市</a>
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12 ">
+                    <p class="zip-code-questions">没有找到您正在寻找的？</p>
+                    <p class="column-four-text">请前往我们的<a class="questions" href="https://zh.usps.com/faqs/ziplookup-faqs.htm" target="_blank">常见问题回答</a>部分以查找您的 ZIP Code<sup>™</sup> 邮区编码问题的答案。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="zip_code_container hidden" id="zip-lookup-app">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 main-header">
+
+                <ul class="header-tabs">
+                    <li class="tab">
+                        <a href="/zip-code-lookup.htm?byaddress" data-location="byaddress"><span class="header-tabs zip-code-address">按地址查找 ZIP Code<sup>™</sup> 邮区编码</span></a>
+                    </li>
+
+                    <li class="tab">
+                        <a href="/zip-code-lookup.htm?bycitystate" data-location="bycitystate"><span class="header-tabs zip-code-city-state">根据城市名称和州名查找 ZIP Code<sup>™</sup> 邮区编码 </span></a>
+                    </li>
+
+                    <li class="tab">
+                        <a href="/zip-code-lookup.htm?citybyzipcode" data-location="citybyzipcode"><span class="header-tabs city-by-zip">按 ZIP Code<sup>™</sup> 邮区编码查找城市</span></a>
+                    </li>
+
+                    <li class="tab last-tab">
+                        <a href="https://zh.usps.com/faqs/ziplookup-faqs.htm" target="_blank" class="header-faqs-zip-code"><span class="header-tabs">FAQs（常见问题回答）</span></a>
+                    </li>
+                </ul>
+
+                <h1>查找 ZIP Code<sup>™</sup>（邮区编码）</h1>
+                <a href="https://zh.usps.com/faqs/ziplookup-faqs.htm" target="_blank" class="header-faqs">FAQs（常见问题回答）</a>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="hidden-lg hidden-md hidden-sm col-xs-12 go-to-wrapper">
+                <div class="dropdown-container">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="go-to-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">前往</button>
+                    <ul class="dropdown-menu" aria-labelledby="go-toDropdownMenu">
+                        <li><a href="/zip-code-lookup.htm?byaddress" data-location="byaddress">按地址查找 ZIP Code<sup>™</sup> 邮区编码</a></li>
+                        <li><a href="/zip-code-lookup.htm?bycitystate" data-location="bycitystate">根据城市名称和州名查找 ZIP Code<sup>™</sup> 邮区编码 </a></li>
+                        <li><a href="/zip-code-lookup.htm?citybyzipcode" data-location="citybyzipcode">按 ZIP Code<sup>™</sup> 邮区编码查找城市</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="server-error externalMode help-block hidden">很抱歉，无法找到相关信息。请反复检查并重试。</div>
+        <!--<p id="content">Text area where content is updated</p>-->
+
+        <!-- Here's the skinny -->
+        <div class="zip_code_address" id="zip_code_address">
+            <form id="zip-code-address-form" class="" data-toggle="validator" role="form">
+                <div class="text-indentation-wrapper">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h2>按地址查找 ZIP Code™ 邮区编码</h2>
+                            <p>输入街道地址以及城市名称和州名或输入街道地址和 ZIP Code<sup>™</sup> 邮区编码。<a id="popover-id" class="info-icon info-popover popover-tooltip"></a></p>
+
+                            <p class="required-field-instructions form-group">* 表示必填字段</p>
+
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <label for="tCompany" class="">公司</label>
+                                    <input id="tCompany" name="tCompany" tabindex="0" type="text" class="form-control" placeholder="" maxlength="38"/>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12 required-field">
+                                    <label for="tAddress" class="">*街道地址</label>
+                                    <input id="tAddress" name="tAddress" tabindex="0" type="text" class="form-control" placeholder="123 Main Street" data-error="请输入地址。"required maxlength="38"/>
+                                    <div class="help-block with-errors"></div>
+                                    <div class="server-error address-tAddress help-block hidden">很抱歉，无法找到相关信息。请反复检查并重试。</div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                    <label for="tApt" class="">公寓/房间/其他</label>
+                                    <input id="tApt" name="tApt" tabindex="0" type="text" class="form-control" placeholder="" maxlength="38" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12 ">
+                                    <label for="tCity" class="">城市</label>
+                                    <input id="tCity" name="tCity" tabindex="0" type="text" class="form-control" placeholder="城市" data-error="请输入城市。" maxlength="50"/>
+                                    <div class="help-block with-errors"></div>
+                                    <div class="server-error address-tCity help-block hidden">很抱歉，无法找到相关信息。请反复检查并重试。</div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                    <label for="tState" class="">州</label>
+                                    <select id="tState" name="tState"  class="form-control dropdown" data-required-error="请选择州。">
+                                        <option value="">选择</option>
+                                        <option value="AL">AL - Alabama</option>
+                                        <option value="AK">AK - Alaska</option>
+                                        <option value="AS">AS - American Samoa</option>
+                                        <option value="AZ">AZ - Arizona</option>
+                                        <option value="AR">AR - Arkansas</option>
+                                        <option value="CA">CA - California</option>
+                                        <option value="CO">CO - Colorado</option>
+                                        <option value="CT">CT - Connecticut</option>
+                                        <option value="DE">DE - Delaware</option>
+                                        <option value="DC">DC - District of Columbia</option>
+                                        <option value="FM">FM - Federated States of Micronesia</option>
+                                        <option value="FL">FL - Florida</option>
+                                        <option value="GA">GA - Georgia</option>
+                                        <option value="GU">GU - Guam</option>
+                                        <option value="HI">HI - Hawaii</option>
+                                        <option value="ID">ID - Idaho</option>
+                                        <option value="IL">IL - Illinois</option>
+                                        <option value="IN">IN - Indiana</option>
+                                        <option value="IA">IA - Iowa</option>
+                                        <option value="KS">KS - Kansas</option>
+                                        <option value="KY">KY - Kentucky</option>
+                                        <option value="LA">LA - Louisiana</option>
+                                        <option value="ME">ME - Maine</option>
+                                        <option value="MH">MH - Marshall Islands</option>
+                                        <option value="MD">MD - Maryland</option>
+                                        <option value="MA">MA - Massachusetts</option>
+                                        <option value="MI">MI - Michigan</option>
+                                        <option value="MN">MN - Minnesota</option>
+                                        <option value="MS">MS - Mississippi</option>
+                                        <option value="MO">MO - Missouri</option>
+                                        <option value="MT">MT - Montana</option>
+                                        <option value="NE">NE - Nebraska</option>
+                                        <option value="NV">NV - Nevada</option>
+                                        <option value="NH">NH - New Hampshire</option>
+                                        <option value="NJ">NJ - New Jersey</option>
+                                        <option value="NM">NM - New Mexico</option>
+                                        <option value="NY">NY - New York</option>
+                                        <option value="NC">NC - North Carolina</option>
+                                        <option value="ND">ND - North Dakota</option>
+                                        <option value="MP">MP - Northern Mariana Islands</option>
+                                        <option value="OH">OH - Ohio</option>
+                                        <option value="OK">OK - Oklahoma</option>
+                                        <option value="OR">OR - Oregon</option>
+                                        <option value="PW">PW - Palau</option>
+                                        <option value="PA">PA - Pennsylvania</option>
+                                        <option value="PR">PR - Puerto Rico</option>
+                                        <option value="RI">RI - Rhode Island</option>
+                                        <option value="SC">SC - South Carolina</option>
+                                        <option value="SD">SD - South Dakota</option>
+                                        <option value="TN">TN - Tennessee</option>
+                                        <option value="TX">TX - Texas</option>
+                                        <option value="UT">UT - Utah</option>
+                                        <option value="VT">VT - Vermont</option>
+                                        <option value="VI">VI - Virgin Islands</option>
+                                        <option value="VA">VA - Virginia</option>
+                                        <option value="WA">WA - Washington</option>
+                                        <option value="WV">WV - West Virginia</option>
+                                        <option value="WI">WI - Wisconsin</option>
+                                        <option value="WY">WY - Wyoming</option>
+                                        <option value="AA">AA - 美洲美军基地</option>
+                                        <option value="AE">AE - 非洲美军基地</option>
+                                        <option value="AE">AE - 加拿大美军基地</option>
+                                        <option value="AE">AE - 欧洲美军基地</option>
+                                        <option value="AE">AE - 中东美军基地</option>
+                                        <option value="AP">AE - 太平洋美军基地</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                    <div class="server-error address-tState help-block hidden">很抱歉，无法找到相关信息。请反复检查并重试。</div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row hidden" id="pr-urban-code">
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <label for="tUrbanCode" class="">城市化代码</label>
+                                    <input id="tUrbanCode" name="tUrbanCode" tabindex="0" type="text" class="form-control" placeholder="" maxlength="38"/>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <label for="tZip-byaddress" class="">ZIP Code<sup>™</sup>（邮区编码）</label>
+                                    <input id="tZip-byaddress" name="tZip-byaddress" tabindex="0" type="text" class="form-control" placeholder="输入 ZIP Code™ 邮区编码" data-error="请输入有效的 ZIP Code™" maxlength="10"/>
+                                    <div class="help-block with-errors"></div>
+                                    <div class="server-error address-tZip-byaddress help-block hidden">未输入有效的邮政编码 (ZIP Code™)。</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 button-wrapper">
+                                    <div class="button-container">
+                                        <a id="zip-by-address" href="" role="button" class="btn-primary">选择"通过邮区编码查找城市"选项便可完成。</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="zip_code_address_results unused-hide">
+            <div class="text-indentation-wrapper">
+                <div class="zip-code-by-address-body-wrapper">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h2>按地址查找 ZIP Code™ 邮区编码</h2>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 entered-address-wrapper ">
+                            <ul class="entered-address">
+                                <li><h4>您输入了：</h4></li>
+                                <li class="address-information-entered">
+                                    <p id="company-name"></p>
+                                    <p id="street-address"></p>
+                                    <p id="city-state-address"></p>
+                                    <p id="zip-code"></p></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 addition-zip-body">
+                            <p><span id="search-by-company" style="margin-bottom:15px; display:none;"><strong>免责声明：</strong> USPS<sup>®</sup>无法保证在此显示的地址为企业的实际地址。在您邮寄邮件前，请核实地址。</span>如果不止一个地址与您提供的信息相匹配，则请尝试输入街道地址和单元号（如果适用）以缩小您的搜索范围。<a class="inline-link edit-by-address browserhistory" href="zip-code-lookup.htm?byaddress" data-location="byaddress">编辑并再次搜索。</a></p>
+                        </div>
+
+                    </div>
+
+                    <div class="row" id="show-results-address">
+                        <div class="col-md-12 col-sm-12 col-xs-12 result-list-wrapper">
+
+                            <div class="col-md-2 col-sm-2 hidden-xs result-per-page-wrapper">
+                                <h4>每页结果：</h4>
+                            </div>
+
+                            <div class="col-md-2 col-sm-2 hidden-xs result-select-wrapper">
+                                <select class="form-control" id="select-results-by-address">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                </select>
+                            </div>
+
+                            <div class="show-results-wrapper">
+                                <h4>显示结果 <br class="results-break">
+                                    <span id="first-element-address"></span>- <span id="last-element-address"></span>/<span id="results-number-address"></span></h4>
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-6 hidden-xs mailing-industry-wrapper">
+                                <h4 class="hidden"><!--Show Mailing Industry Details--></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix visible-sm-block"></div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 result-address-wrapper">
+                            <div id="zipByAddressDiv" class="industry-detail">正在加载……</div>
+
+                            <!-- start Handlebars template -->
+                            <script id="zipByAddressTemplate" type="text/x-handlebars-template">
+                                <ul class="list-group industry-detail">
+                                    {{#each addressList}}
+                                    <li class="list-group-item paginate">
+                                        <div class="zipcode-result-address">
+                                            <p>{{companyName}}</p>
+                                            {{#if urbanizationCode}}
+                                            <p>{{{isPrefixed urbanizationCode}}}</p>
+                                            {{/if}}
+                                            <p>{{addressLine1}}</p>
+                                            <p>{{city}} {{state}} <strong>{{zip5}}-{{zip4}}</strong></p>
+                                        </div>
+
+                                        <div class="address-detail-info-wrapper">
+                                            <div class="row info-row-wrapper">
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>CARRIER ROUTE</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if carrierRoute}}{{carrierRoute}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>COUNTY</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if countyName}}{{countyName}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>DELIVERY POINT CODE</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if deliveryPoint}}{{deliveryPoint}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row info-row-wrapper">
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>CHECK DIGIT</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if checkDigit}}{{checkDigit}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>COMMERCIAL MAIL RECEIVING AGENCY</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if cmar}}{{cmar}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>LAC™</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if lacs}}{{lacs}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row info-row-wrapper">
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>eLOT™</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if elot}}{{elot}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>eLOT ASCENDING/DESCENDING INDICATOR</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if elotIndicator}}{{elotIndicator}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>RECORD TYPE CODE</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if recordType}}{{recordType}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="row info-row-wrapper">
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>PMB DESIGNATOR</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if pmbDesignator}}{{pmbDesignator}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>PMB NUMBER</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if pmbNumber}}{{pmbNumber}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>DEFAULT FLAG</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if defaultFlag}}{{defaultFlag}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row info-row-wrapper">
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>EWS FLAG</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if ewsFlag}}{{ewsFlag}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="col-sm-12 col-xs-6 detail-heading-wrapper">
+                                                        <p>DPV CONFIRMATION INDICATOR</p>
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-xs-6 row-detail-wrapper">
+                                                        <p>{{#if dpvConfirmation}}{{dpvConfirmation}}{{else}}-{{/if}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </script>
+                            <!-- end Handlebars template -->
+
+                        </div>
+                    </div>
+
+                    <div class="row" id="show-results-address-responsive">
+                        <div class="col-md-12 col-sm-12 col-xs-12 result-list-wrapper">
+
+                            <div class="col-md-2 col-sm-2 hidden-md hidden-lg result-per-page-wrapper">
+                                <h4>每页结果：</h4>
+                            </div>
+
+                            <div class="col-md-2 col-sm-2 hidden-md hidden-lg result-select-wrapper">
+                                <select class="form-control" id="select-results-by-address-responsive">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 results-per-page">
+                            <ul id="page-nav-address"></ul>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 results-per-page">
+                            <div class="server-error mobile-paginator-input help-block hidden">请输入 1 至 <span class="number-of-pages"></span> 之间的一个数字。</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 button-wrapper">
+
+                            <div class="button-container">
+                                <a href="#" role="button" class="btn-primary button--white" id="search-address-again">查找另一个 ZIP Code™ 邮区编码 </a>
+                            </div>
+
+                            <div class="button-container">
+                                <a href="/zip-code-lookup.htm?byaddress" data-location="byaddress" role="button" class="btn-primary button--white edit-by-address browserhistory">编辑并再次搜索 </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="zip_code_city_state" id="zip_code_city_state">
+            <form id="zip-code-city-state-form" class="container" data-toggle="validator" role="form">
+                <div class="text-indentation-wrapper">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h2>根据城市名称和州名查找 ZIP Code™ 邮区编码 </h2>
+                            <p>完成以下两个字段以查看完整列表。</p>
+                        </div>
+                    </div>
+
+                    <p class="required-field-instructions form-group">* 表示必填字段</p>
+
+                    <div class="row">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12 ">
+                            <label for="tCity-city-state" class="">*城市</label>
+                            <input id="tCity-city-state" name="tCity-city-state" tabindex="0" type="text" class="form-control" placeholder="城市" data-error="请输入城市。" required maxlength="50"/>
+                            <div class="help-block with-errors"></div>
+                            <div class="server-error city-state-tCity help-block hidden">很抱歉，无法找到相关信息。请反复检查并重试。</div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group required-field">
+                            <label for="tState-city-state" class="">*州</label>
+                            <select id="tState-city-state" name="tState-city-state"  class="form-control dropdown" data-required-error="请选择州。" required>
+                                <option value="">选择</option>
+                                <option value="AL">AL - Alabama</option>
+                                <option value="AK">AK - Alaska</option>
+                                <option value="AS">AS - American Samoa</option>
+                                <option value="AZ">AZ - Arizona</option>
+                                <option value="AR">AR - Arkansas</option>
+                                <option value="CA">CA - California</option>
+                                <option value="CO">CO - Colorado</option>
+                                <option value="CT">CT - Connecticut</option>
+                                <option value="DE">DE - Delaware</option>
+                                <option value="DC">DC - District of Columbia</option>
+                                <option value="FM">FM - Federated States of Micronesia</option>
+                                <option value="FL">FL - Florida</option>
+                                <option value="GA">GA - Georgia</option>
+                                <option value="GU">GU - Guam</option>
+                                <option value="HI">HI - Hawaii</option>
+                                <option value="ID">ID - Idaho</option>
+                                <option value="IL">IL - Illinois</option>
+                                <option value="IN">IN - Indiana</option>
+                                <option value="IA">IA - Iowa</option>
+                                <option value="KS">KS - Kansas</option>
+                                <option value="KY">KY - Kentucky</option>
+                                <option value="LA">LA - Louisiana</option>
+                                <option value="ME">ME - Maine</option>
+                                <option value="MH">MH - Marshall Islands</option>
+                                <option value="MD">MD - Maryland</option>
+                                <option value="MA">MA - Massachusetts</option>
+                                <option value="MI">MI - Michigan</option>
+                                <option value="MN">MN - Minnesota</option>
+                                <option value="MS">MS - Mississippi</option>
+                                <option value="MO">MO - Missouri</option>
+                                <option value="MT">MT - Montana</option>
+                                <option value="NE">NE - Nebraska</option>
+                                <option value="NV">NV - Nevada</option>
+                                <option value="NH">NH - New Hampshire</option>
+                                <option value="NJ">NJ - New Jersey</option>
+                                <option value="NM">NM - New Mexico</option>
+                                <option value="NY">NY - New York</option>
+                                <option value="NC">NC - North Carolina</option>
+                                <option value="ND">ND - North Dakota</option>
+                                <option value="MP">MP - Northern Mariana Islands</option>
+                                <option value="OH">OH - Ohio</option>
+                                <option value="OK">OK - Oklahoma</option>
+                                <option value="OR">OR - Oregon</option>
+                                <option value="PW">PW - Palau</option>
+                                <option value="PA">PA - Pennsylvania</option>
+                                <option value="PR">PR - Puerto Rico</option>
+                                <option value="RI">RI - Rhode Island</option>
+                                <option value="SC">SC - South Carolina</option>
+                                <option value="SD">SD - South Dakota</option>
+                                <option value="TN">TN - Tennessee</option>
+                                <option value="TX">TX - Texas</option>
+                                <option value="UT">UT - Utah</option>
+                                <option value="VT">VT - Vermont</option>
+                                <option value="VI">VI - Virgin Islands</option>
+                                <option value="VA">VA - Virginia</option>
+                                <option value="WA">WA - Washington</option>
+                                <option value="WV">WV - West Virginia</option>
+                                <option value="WI">WI - Wisconsin</option>
+                                <option value="WY">WY - Wyoming</option>
+                                <option value="AA">AA - 美洲美军基地</option>
+                                <option value="AE">AE - 非洲美军基地</option>
+                                <option value="AE">AE - 加拿大美军基地</option>
+                                <option value="AE">AE - 欧洲美军基地</option>
+                                <option value="AE">AE - 中东美军基地</option>
+                                <option value="AP">AE - 太平洋美军基地</option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                            <div class="server-error address-tState help-block hidden">我们无法通过您提供的信息找到 ZIP Code™ 邮区编码。</div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 button-wrapper">
+                            <!--<div class="server-error-mobile city-state-tCity help-block hidden">We could not find a ZIP Code&trade; with the information you provided.</div>-->
+
+                            <div class="button-container">
+                                <a id="zip-by-city-and-state" href="#" role="button" class="btn-primary">选择"通过邮区编码查找城市"选项便可完成。</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="zip_code_city_state_results">
+            <div class="container-fluid">
+                <div class="text-indentation-wrapper">
+                    <div class="zip-code-city-state-body-wrapper">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-10 col-xs-12">
+                                <h2>根据城市名称和州名查找 ZIP Code™ 邮区编码 </h2>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 entered-address-wrapper ">
+                                <ul class="list-group entered-data">
+                                    <li><h4>您输入了：</h4></li>
+                                    <li class="city-state-information-entered special-number-wrapper"><p></p></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 addition-zip-body">
+                                <p>如果不止一个 ZIP Code<sup>™</sup> 邮区编码与您提供的信息相匹配，请尝试通过地址查找 <a class="inline-link browserhistory" id="edit-by-address-out" href="/zip-code-lookup.htm?byaddress" data-location="byaddress">ZIP Code<sup>™ 邮区编码</sup>。</a></p>
+                            </div>
+
+                        </div>
+
+                        <div class="row" id="show-results-city-state">
+                            <div class="col-md-12 col-sm-12 col-xs-12 result-list-wrapper">
+                                <div class="col-md-3 col-sm-2 hidden-xs result-per-page-wrapper ">
+                                    <h4>每页结果：</h4>
+                                </div>
+
+                                <div class="col-md-2 col-sm-2 hidden-xs result-select-wrapper">
+                                    <select class="form-control" id="select-results-by-city-state">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                </div>
+
+                                <div class="show-results-wrapper">
+                                    <h4>显示结果 <br class="results-break">
+                                        <span id="first-element-city-state"></span>- <span id="last-element-city-state"></span>/<span id="results-number-city-state"></span></h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 city-state-result-wrapper">
+                                <div id="zipByCityStateDiv" class="pagination-sm">正在加载……</div>
+                                <script id="zipByCityStateTemplate" type="text/x-handlebars-template">
+                                    <ul" class="list-group city-state-detail">
+                                    {{#each zipList}}
+                                    <li class="list-group-item paginate">
+                                        <div class="city-state-result">
+                                            <p>{{../city}} {{../state}} <strong>{{zip5}}</strong></p>
+                                            <p>{{#if recordType}}
+                                                {{{whatIsIt recordType}}}
+                                                {{else}}
+                                                {{/if}}</p>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+                                    </ul>
+                                </script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!--<div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="return-top-container">
+                                        <a href="#show-results-city-state" class="return-to-top"></a>
+                                    </div>
+                                </div>-->
+
+                            <div class="row" id="show-results-city-state-responsive">
+                                <div class="col-md-12 col-sm-12 col-xs-12 result-list-wrapper">
+
+                                    <div class="col-md-2 col-sm-2 hidden-md hidden-lg result-per-page-wrapper">
+                                        <h4>每页结果：</h4>
+                                    </div>
+
+                                    <div class="col-md-2 col-sm-2 hidden-md hidden-lg result-select-wrapper">
+                                        <select class="form-control" id="select-results-by-city-state-responsive">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 results-per-page">
+                                <ul id="page-nav-city-state"></ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 results-per-page">
+                                <div class="server-error mobile-paginator-input help-block hidden">请输入 1 至 <span class="number-of-pages"></span> 之间的一个数字。</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 button-wrapper">
+
+                                <div class="button-container">
+                                    <a href="#" role="button" class="btn-primary button--white" id="look-up-another-zip-code-by-citystate">查找另一个 ZIP Code™ 邮区编码 </a>
+                                </div>
+
+                                <div class="button-container" id="edit-by-city-state">
+                                    <a href="/zip-code-lookup.htm?bycitystate" data-location="bycitystate" role="button" class="btn-primary button--white browserhistory">编辑并再次搜索 </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--  end container-fluid -->
+        </div>
+
+        <div class="zip_code_cities" id="zip_code_cities">
+            <form id="zip-code-zip-by-city-form" class="container" data-toggle="validator" role="form">
+                <div class="text-indentation-wrapper">
+                    <div class="row">
+                        <div class="cities-zip-code-wrapper">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h2>按 ZIP Code™（邮区编码）查找城市</h2>
+                                <p>输入 ZIP Code<sup>™</sup>邮区编码以查看该邮区编码所覆盖的城市。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="form-group required-field-instructions">* 表示必填字段</p>
+
+                    <div class="row">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <!--<label for="tZip" class="">*ZIP Code<sup>&trade;</sup></label>
+                            <input id="tZip" name="tZip" tabindex="0" type="text" class="form-control" placeholder="Enter ZIP Code&trade;" maxlength="10" required/>-->
+                            <label class="inputLabel">* ZIP Code<sup>™</sup> 邮区编码</label>
+                            <input tabindex="0" type="text" id="tZip" class="form-control" placeholder="输入 ZIP Code™ 邮区编码" maxlength="10" />
+                            <div class="help-block with-errors"></div>
+                            <div class="error-message enterZip" style="display: none">请输入有效的 ZIP Code™</div>
+                            <div class="server-error cities-by-zipcode-tZip help-block hidden">未输入有效的邮政编码 (ZIP Code™)。</div>
+                        </div>
+                        <div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 button-wrapper">
+                                <div class="button-container">
+                                    <a id="cities-by-zip-code" href="" role="button" class="btn-primary">选择"通过邮区编码查找城市"选项便可完成。</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="zip_code_cities_results">
+            <div class="container-fluid cities-zip-code">
+                <div class="text-indentation-wrapper">
+                    <div class="zip-code-by-city-body-wrapper">
+                        <div class="row cities-zip-code">
+                            <div class="col-md-12 col-sm-12 col-xs-12 sub-heading-content">
+                                <h2>按 ZIP Code™（邮区编码）查找城市</h2>
+                                <p>对于快速投递，请使用始终适用此 ZIP Code<sup>™</sup> 邮区编码的推荐或认可的城市名称。</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 entered-zip-code-wrapper">
+                            <div class="row col-md-12 col-sm-12 col-xs-12 entered-zipcode">
+                                <h3>您输入了：</h3>
+                                <p class="special-number-wrapper"></p>
+                            </div>
+
+                            <div id="cityByZipDiv"></div>
+
+                            <script id="cityByZipTemplate" type="text/x-handlebars-template">
+                                <div class="row col-md-5 col-sm-12 col-xs-12 recommended-cities">
+                                    <p class="detail-heading-wrapper">RECOMMENDED CITY NAME</p>
+                                    <p class="row-detail-wrapper">{{defaultCity}} {{defaultState}}</p>
+                                </div>
+
+                                <div class="row col-md-7 col-sm-12 col-xs-12 other-city-names">
+                                    <p class="detail-heading-wrapper">OTHER CITY NAMES RECOGNIZED FOR ADDRESSES IN THIS ZIP CODE<sup>&trade;</sup></p>
+                                    {{#each citiesList}}
+                                    <p class="row-detail-wrapper">{{city}} {{state}}</p>
+                                    {{/each}}
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <hr class="zipcode-line-break">
+                                    </div>
+                                </div>
+                                {{#isFPOHelper defaultRecordType}}
+                                {{/isFPOHelper}}
+
+                                <div class="row col-md-12 col-sm-12 col-xs-12 collapse-wrapper zip-code-cities">
+                                    <div class="section--show-hide-mobile">
+                                        <div class="section--title">
+                                            <div class="expand-collapse zip-code-cities closed">CITY NAMES TO AVOID</div>
+                                            <div class="avoid-cities-wrapper extended-content collapsed">
+                                                {{#each nonAcceptList}}
+                                                <p id="non-accepted-names" class="extended-content collapsed">{{city}} {{state}}</p>
+                                                {{/each}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </script>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 button-wrapper">
+                            <div class="button-container">
+                                <a href="#" role="button" class="btn-primary button--white" id="look-up-another-zip-code-citybyzipcode">查找另一个 ZIP Code™ 邮区编码 </a>
+                            </div>
+
+                            <div class="button-container" id="">
+                                <a href="/zip-code-lookup.htm?citybyzipcode" data-location="citybyzipcode" role="button" class="btn-primary button--white edit-by-citybyzipcode browserhistory">编辑并再次搜索 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container-fluid -->
+        </div>
+
+        <div class="results-return" id="results-return">
+            <a href="#"><img src="../media/zipcode-lookup/backtop.png" alt="返回顶部" title="返回顶部"></a>
+        </div>
+    </div> <!--  end container-fluid -->
+</div> <!-- zip_code_container -->
+
+<!---  GLOBAL FOOTER -->
+<div id="global-footer">
+    <div id="localgefooter" w3-include-html="/global-elements/footer/TOOLS-footer.htm" class="hide"></div>
+    <div id="global-footer--wrap" class="global-footer--wrap">
+        <link type="text/css" rel="stylesheet" href="/global-elements/footer/css/main-sb.css">
+        <link type="text/css" rel="stylesheet" href="/global-elements/footer/css/footer-sb.css">
+
+        <!--[if lte IE 8]>
+        <link href="/global-elements/footer/css/main.ie.sb.css" rel="stylesheet" type="text/css" />
+        <link href="/global-elements/footer/css/footer.ie.sb.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
+
+        <script type="text/javascript">
+            var MTIProjectId='f3e4655b-fd06-4b8b-8a25-01c859692612';
+            (function() {
+                var mtiTracking = document.createElement('script');
+                mtiTracking.type='text/javascript';
+                mtiTracking.async='true';
+                mtiTracking.src=('https:'==document.location.protocol?'https:':'http:')+'//fast.fonts.net/t/trackingCode.js';
+                (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+            })();
+        </script>
+        <footer class="global-footer">
+            <a href="https://zh.usps.com/" class="global-footer--logo-link"></a>
+            <nav class="global-footer--navigation">
+                <ol>
+                    <li style="color:#333366;" class="global-footer--navigation-category">
+                        实用链接
+                        <ol class="global-footer--navigation-options">
+                            <li>
+                                <a href="https://zh.usps.com/help/contact-us.htm">联系我们</a>
+                            </li>
+                            <li>
+                                <a href="https://zh.usps.com/globals/site-index.htm">网站目录</a>
+                            </li>
+                            <li>
+                                <a href="https://zh-faq.usps.com/s/">FAQs（常见问题回答）</a>
+                            </li>
+                            <li><a href="#" onclick="KAMPYLE_ONSITE_SDK.showForm(244)">反馈</a></li>
+                        </ol>
+                    </li>
+                    <li style="color:#333366;" class="global-footer--navigation-category">
+                        关于 About.USPS.com
+                        <ol class="global-footer--navigation-options">
+                            <li>
+                                <a href="https://zh-about.usps.com/">关于 USPS 首页 </a>
+                            </li>
+                            <li>
+                                <a href="https://zh-about.usps.com/newsroom/">新闻室</a>
+                            </li>
+                            <li>
+                                <a href="https://zh-about.usps.com/newsroom/service-alerts/">USPS 服务更新</a>
+                            </li>
+                            <li>
+                                <a href="https://zh-about.usps.com/resources/">表格及出版物</a>
+                            </li>
+                            <li>
+                                <a href="https://zh-about.usps.com/what-we-are-doing/gov-services/">政府服务</a>
+                            </li>
+                            <li>
+                                <a href="https://zh-about.usps.com/careers/">求职</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li style="color:#333366;" class="global-footer--navigation-category">
+                        其他 USPS 站点
+                        <ol class="global-footer--navigation-options">
+                            <li>
+                                <a href="https://gateway.usps.com/">业务客户通道</a>
+                            </li>
+                            <li>
+                                <a href="https://www.uspis.gov/">邮政检察员</a>
+                            </li>
+                            <li>
+                                <a href="https://www.uspsoig.gov/">检察长</a>
+                            </li>
+                            <li>
+                                <a href="https://pe.usps.com">邮政资源浏览器</a>
+                            </li>
+                            <li>
+                                <a href="https://postalmuseum.si.edu/">国家邮政博物馆</a>
+                            </li>
+                            <li>
+                                <a href="https://zh.usps.com/business/web-tools-apis/">开发人员资源</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li style="color:#333366;" class="global-footer--navigation-category">
+                        法律信息
+                        <ol class="global-footer--navigation-options">
+                            <li>
+                                <a href="https://zh-about.usps.com/who/legal/privacy-policy/">隐私政策</a>
+                            </li>
+                            <li>
+                                <a href="https://zh-about.usps.com/who/legal/terms-of-use.htm">使用条款</a>
+                            </li>
+                            <li>
+                                <a href="https://zh-about.usps.com/who/legal/foia/">FOIA</a>
+                            </li>
+                            <li>
+                                <a href="https://zh-about.usps.com/who/legal/no-fear-act/">《告知与联邦雇员反歧视和报复法》EEO 数据</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="global-footer--copyright">版权所有© <script type="text/javascript">document.write(new Date().getFullYear());</script> USPS。保留所有权利。</div>
+
+
+            <ul class="global-footer--social">
+                <li>
+                    <a style="text-decoration: none;" href="https://www.facebook.com/USPS?rf=108501355848630">
+                        <img alt="Facebook 社交媒体图标的图像。" src="/global-elements/footer/images/social-facebook_1.png">
+                    </a>
+                </li>
+                <li>
+                    <a style="text-decoration: none;" href="https://twitter.com/usps">
+                        <img alt="Twitter 社交媒体图标的图像。" src="/global-elements/footer/images/social-twitter_2.png">
+                    </a></li>
+                <li>
+                    <a style="text-decoration: none;" href="http://www.pinterest.com/uspsstamps/">
+                        <img alt="Pinterest 社交媒体图标的图像。" src="/global-elements/footer/images/social-pinterest_6.png">
+                    </a>
+                </li>
+                <li>
+                    <a style="text-decoration: none;" href="https://www.youtube.com/usps">
+                        <img alt="Youtube 社交媒体图标的图像。" src="/global-elements/footer/images/social-youtube_3.png">
+                    </a>
+                </li>
+            </ul>
+
+        </footer>
+    </div><div id='quick-tools-container' style='display:none;'></div>
+    <script type="text/javascript">var djConfig = { webtrendsApplicationId : 'Tools', blankGif: '/global-elements/navigation/images/blank.gif' };</script>
+    <script type="text/javascript" src="https://zh-tools.usps.com/go/pages/common/quicktools-api.jsp"></script>
+
+    <script type="text/javascript">
+        var env = "prod";
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MVCC8H"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MVCC8H');</script>
+    <!-- End Google Tag Manager -->
+</div>
+<!-- END GLOBAL FOOTER -->
+<!--<script src="/libs/require.js" data-main="/scripts/app"></script>-->
+<script src="/scripts/libs/jquery.min.js"></script>
+<script src="/scripts/libs/bootstrap.min.js"></script>
+<script src="/scripts/local-global-elements.js"></script>
+<script src="/scripts/libs/handlebars-v4.0.10.js"></script>
+<script src="/scripts/libs/validator.min.js"></script>
+<script src="/scripts/libs/jquery.simplePagination.js"></script>
+<script src="/scripts/zip-code.js"></script>
+
+<div style="display:none;"><a href="http://www.translations.com">Powered By OneLink</a></div>
+</body>
+</html>
+
+
