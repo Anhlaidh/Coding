@@ -8,6 +8,16 @@ import java.util.*;
  * @date: 2020/3/13 0013 15:36
  */
 public class SortImpl implements ISort {
+
+
+    /**
+     * 快速排序  O(nLog2n)
+     * 一分为三,第一个数字为mid,分成比mid小,比mid大两个数组
+     * 可知左边的一定比mid小,右边的一定比mid大
+     * 递归拆分,合并即可获得有序数组
+     * @param array 数组
+     * @return 有序数组
+     */
     @Override
     public int[] QuickSort(int[] array) {
         if (array.length<=1) return array;
@@ -48,6 +58,12 @@ public class SortImpl implements ISort {
 
     }
 
+    /**
+     * 归并排序O(nLog2n)
+     * 将数组一分为二一分为二,递归拆分成只有一个数字
+     * 根据大小,来组合成有序数组
+     * @param array 无序数组
+     */
 
     @Override
     public void MergeSort(int[] array) {
@@ -102,6 +118,12 @@ public class SortImpl implements ISort {
         }
     }
 
+    /**
+     * 冒泡排序O(n2)
+     * 依次比较,当前数字大于比较数字则交换,否则不变,将大数冒到最右
+     * 循环冒泡,得到有序数组
+     * @param array 无序数组
+     */
     @Override
     public void BubbleSort(int[] array) {
         for (int j = array.length; j > 0; j--) {
@@ -115,6 +137,11 @@ public class SortImpl implements ISort {
         }
     }
 
+    /**
+     * 选择排序O(n2)
+     * 遍历数组,找到最小值,与array[i]交换,以此类推
+     * @param array
+     */
     @Override
     public void SelectSort(int[] array) {
         for (int i =0;i<array.length;i++){
@@ -135,6 +162,11 @@ public class SortImpl implements ISort {
 
     }
 
+    /**
+     * 直接插入排序O(n2)
+     * 依次遍历剩余数组,与当前尾节点比较,决定插入位置,循环插入
+     * @param array
+     */
     @Override
     public void InsertionSort(int[] array) {
         int index = 0;//当前排好序的尾节点
