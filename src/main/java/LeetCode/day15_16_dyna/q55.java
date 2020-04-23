@@ -1,4 +1,4 @@
-package LeetCode.day15_dyna;
+package LeetCode.day15_16_dyna;
 
 /**
  * @Description: 跳跃游戏 https://leetcode-cn.com/problems/jump-game/

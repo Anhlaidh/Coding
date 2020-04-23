@@ -1,4 +1,4 @@
-package LeetCode.day15_dyna;
+package LeetCode.day15_16_dyna;
 
 /**
  * @Description:
@@ -8,6 +8,16 @@ package LeetCode.day15_dyna;
 public class q63 {
     public static void main(String[] args) {
 
+        int[][] obstacleGrid = {
+                {0, 0, 0},
+                {0, 1, 0},
+                {0, 0, 0},
+        };
+            int ret = uniquePathsWithObstacles(obstacleGrid);
+
+            String out = String.valueOf(ret);
+
+            System.out.print(out);
     }
     public static int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int m = obstacleGrid.length;
@@ -22,6 +32,7 @@ public class q63 {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (obstacleGrid[i][j] == 1) {
+                    System.out.print(" ");
                     f[i][j] = 0;
                     continue;
                 }
@@ -34,7 +45,10 @@ public class q63 {
                 if (j > 0) {
                     f[i][j] += f[i][j - 1];
                 }
+                System.out.print(f[i][j]);
+
             }
+            System.out.println();
         }
         return f[m - 1][n - 1];
 
