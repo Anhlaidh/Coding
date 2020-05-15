@@ -3,8 +3,6 @@ package Java.JavaLearning_Advanced.thread.Quartz;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
-import java.util.Date;
-
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 import static org.quartz.TriggerBuilder.*;
@@ -25,7 +23,7 @@ public class QuartzTest {
                             .repeatForever())//一直执行
                     .build();
             //定义一个JobDetail
-            JobDetail job = newJob(HelloJob.class)
+            JobDetail job = newJob(MyJob.class)
                     .withIdentity("job1", "group1")
                     .usingJobData("name", "quartz")
                     .build();
@@ -41,12 +39,4 @@ public class QuartzTest {
     }
 
 
-}
-class HelloJob implements Job {
-    @Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        JobDetail detail = jobExecutionContext.getJobDetail();
-        String name = detail.getJobDataMap().getString("name");
-        System.out.println("hello from " + name + "at" + new Date());
-    }
 }
