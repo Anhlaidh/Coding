@@ -15,23 +15,6 @@ public class Matrix {
 
     static int solution(int[] input) {
         int[][] dp = new int[input.length - 1][input.length - 1];
-//        for (int i = 0; i < dp.length; i++) {
-//            int p = i;
-//            for (int j = p; (j <= p+1)&&j<dp.length; j++) {
-//                dp[i][j] = Integer.MAX_VALUE;
-//                if (i == j) {
-//                    dp[i][j] = 0;
-//                    continue;
-//                }
-//
-//                for (int k = i; k < j; k++) {
-//                    int temp = dp[i][k] + dp[k + 1][j] + input[i] * input[k + 1] * input[j + 1];
-//                    dp[i][j] = Math.min(dp[i][k] + dp[k + 1][j] + input[i] * input[k+1] * input[j+1], dp[i][j]);
-//
-//                }
-//            }
-//            p++;
-//        }
         int p = 0;
         while (p <dp.length) {
             for (int i = 0; i <dp.length; i++) {
@@ -42,7 +25,6 @@ public class Matrix {
                         continue;
                     }
                     for (int k = i; k < j; k++) {
-                        int temp = dp[i][k] + dp[k + 1][j] + input[i] * input[k + 1] * input[j + 1];
                         dp[i][j] = Math.min(dp[i][k] + dp[k + 1][j] + input[i] * input[k+1] * input[j+1], dp[i][j]);
                     }
                 }
@@ -50,12 +32,6 @@ public class Matrix {
             p++;
 
         }
-        for (int i = 0; i < dp.length; i++) {
-            for (int j = 0; j < dp[0].length; j++) {
-                System.out.print(dp[i][j]+"\t\t\t");
-            }
-            System.out.println();
-        }
-        return dp[input.length-2][input.length-2];
+        return dp[0][input.length-2];
     }
 }
