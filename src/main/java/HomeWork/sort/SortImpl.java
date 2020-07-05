@@ -195,4 +195,22 @@ public class SortImpl implements ISort {
             index++;
         }
     }
+
+    @Override
+    public int[] CountSort(int[] A, int min, int max) {
+        int[] temp = new int[max - min];
+        int[] B = new int[A.length];
+        int index = 0;
+        for (int i = 0; i < A.length; i++) {
+            temp[A[i] - min]++;
+        }
+        for (int i = 0; i < temp.length; i++) {
+            for (int j = 0; j < temp[i]; j++) {
+                B[index] = i;
+                index++;
+            }
+        }
+        return B;
+    }
+
 }

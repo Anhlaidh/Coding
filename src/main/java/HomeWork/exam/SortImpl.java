@@ -11,7 +11,6 @@ import java.util.Arrays;
  */
 public class SortImpl implements ISort {
 
-
     /**
      * 快速排序  O(nLog2n)
      * 一分为三,第一个数字为mid,分成比mid小,比mid大两个数组
@@ -213,5 +212,10 @@ public class SortImpl implements ISort {
             }
             index++;
         }
+    }
+
+    @Override
+    public int[] CountSort(int[] A, int min, int max) {
+        return new int[0];
     }
 }

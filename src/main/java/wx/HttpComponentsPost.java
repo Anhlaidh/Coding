@@ -1,4 +1,4 @@
-package Java.JavaLearning_Advanced.HTTP.HttpComponet;
+package wx;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.config.RequestConfig;
@@ -32,17 +32,20 @@ public class HttpComponentsPost {
                 .setConnectionRequestTimeout(10000)
                 .setRedirectsEnabled(false).build();
 //        https://zh-tools.usps.com/zip-code-lookup.htm?byaddress
-        HttpPost httpPost = new HttpPost("https://api-hmugo-web.itheima.net/api/public/v1/users/wxlogin");
+//        HttpPost httpPost = new HttpPost("https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata");
+        HttpPost httpPost = new HttpPost("http://127.0.0.1:8787/login");
         //配置post参数
         List<BasicNameValuePair> list = new ArrayList<>();
+        list.add(new BasicNameValuePair("tel", URLEncoder.encode("123123123", "UTF-8")));
+
 //        list.add(new BasicNameValuePair("tAdress", URLEncoder.encode("1 Market Street", "UTF-8")));//请求参数
 //        list.add(new BasicNameValuePair("tCity", URLEncoder.encode("San Francisco", "UTF-8")));//请求参数
 //        list.add(new BasicNameValuePair("sState", "CA"));//请求参数
-        list.add(new BasicNameValuePair("code", URLEncoder.encode("033rbuqT1BJmw31FAspT1icrqT1rbuqb", "UTF-8")));
-        list.add(new BasicNameValuePair("encryptedData", URLEncoder.encode("RTRqsLy10FO3eTdFmikDA3yvliwdH5y9Zg/l+He6Mr3jmJ9Rc+…uRpZ+t+brTBVNwTq8aIXcoGItdLIh0KRl/okFNDWsky2telc=", "UTF-8")));
-        list.add(new BasicNameValuePair("iv", URLEncoder.encode("xmXGriadT8yIvSQeg6pOqA==", "UTF-8")));
-        list.add(new BasicNameValuePair("signature", URLEncoder.encode("26b203e04a5d0a0014764bb079352cdbbb704442", "UTF-8")));
-        list.add(new BasicNameValuePair("rawData", URLEncoder.encode("{\"nickName\":\"神鸦\",\"gender\":1,\"language\":\"zh_CN\",\"ci…RhibzPgGMicZ3TicnfgKTicicZUvSv8eRswKnNdV5BA/132\"}", "UTF-8")));
+//        list.add(new BasicNameValuePair("code", URLEncoder.encode("033rbuqT1BJmw31FAspT1icrqT1rbuqb", "UTF-8")));
+//        list.add(new BasicNameValuePair("encryptedData", URLEncoder.encode("RTRqsLy10FO3eTdFmikDA3yvliwdH5y9Zg/l+He6Mr3jmJ9Rc+…uRpZ+t+brTBVNwTq8aIXcoGItdLIh0KRl/okFNDWsky2telc=", "UTF-8")));
+//        list.add(new BasicNameValuePair("iv", URLEncoder.encode("xmXGriadT8yIvSQeg6pOqA==", "UTF-8")));
+//        list.add(new BasicNameValuePair("signature", URLEncoder.encode("26b203e04a5d0a0014764bb079352cdbbb704442", "UTF-8")));
+//        list.add(new BasicNameValuePair("rawData", URLEncoder.encode("{\"nickName\":\"神鸦\",\"gender\":1,\"language\":\"zh_CN\",\"ci…RhibzPgGMicZ3TicnfgKTicicZUvSv8eRswKnNdV5BA/132\"}", "UTF-8")));
         try {
             UrlEncodedFormEntity entity = new UrlEncodedFormEntity(list, "UTF-8");
             // 设置post请求参数

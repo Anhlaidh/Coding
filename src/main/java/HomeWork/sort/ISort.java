@@ -11,4 +11,6 @@ public interface ISort {
      void BubbleSort(int[] array);
      void SelectSort(int[] array);
      void InsertionSort(int[] array);
+
+     int[] CountSort(int[] A,int min,int max);
 }
