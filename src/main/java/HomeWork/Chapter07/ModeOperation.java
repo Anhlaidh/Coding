@@ -36,7 +36,9 @@ public class ModeOperation {
                 currentTimes++;//当重复时计数器加一
                 i++;
             }
-           if (count<currentTimes) num = arr[i-1];
+           if (count<currentTimes) {
+               num = arr[i-1];
+           }
             count = Math.max(count, currentTimes);//找到次数最多的并赋值
 
         }

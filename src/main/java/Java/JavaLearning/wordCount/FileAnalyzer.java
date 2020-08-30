@@ -32,7 +32,9 @@ public class FileAnalyzer {
                         if (result.containsKey(word)) {
                             Word w = result.get(word);
                             w.setTimes(w.getTimes() + 1);
-                        } else result.put(word, new Word(word, 1));
+                        } else {
+                            result.put(word, new Word(word, 1));
+                        }
                     }
                 }
             }

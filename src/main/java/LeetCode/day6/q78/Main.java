@@ -16,7 +16,9 @@ public class Main {
         }
         else {
             for (;current<items.length;current++){
-                if (currentList.contains(items[current])) continue;
+                if (currentList.contains(items[current])) {
+                    continue;
+                }
                 currentList.add(items[current]);
                 backtrack(items,currentList,lists,current);
 //                System.out.println(currentList);

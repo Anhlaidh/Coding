@@ -18,7 +18,9 @@ public class testString {
         System.out.println(a.length());//a的长度
         System.out.println(a.trim());//返回a去除前后空格后的字符串，a不变
         String[] b = a.split(";");//将a按照；分割成数组
-        for (int i=0;i<b.length;i++) System.out.println(b[i]);
+        for (int i=0;i<b.length;i++) {
+            System.out.println(b[i]);
+        }
         System.out.println("==============");
         System.out.println(a.substring(2,5));//截取a的第二个到第五个字符，a不变
         System.out.println(a.replace("1","a"));//把1替换成a

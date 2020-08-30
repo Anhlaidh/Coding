@@ -9,9 +9,12 @@ public class jumpII {
     public static void main(String[] args) {
         System.out.println(JumpFloorII(6));
 
+
     }
     public static  int JumpFloorII(int target) {
-        if(target==1) return 1;
+        if(target==1) {
+            return 1;
+        }
         int sum = 1;
         int[] arr = new int[target+1];
         for (int i = 2; i < arr.length; i++) {

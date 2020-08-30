@@ -26,8 +26,12 @@ public class Main {
             int temp1 = temp / 10;
             int temp2 = n % i;
             sum += temp1 * i;
-            if (current==1) sum += temp2 + 1;
-            if (current>1) sum += i;
+            if (current==1) {
+                sum += temp2 + 1;
+            }
+            if (current>1) {
+                sum += i;
+            }
         }
         return sum;
 

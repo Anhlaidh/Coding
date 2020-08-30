@@ -29,7 +29,9 @@ public class taskAssignment {
 
         }else {
             for (int i=0;i<num.length;i++){
-                if (currentList.contains(num[i])) continue;
+                if (currentList.contains(num[i])) {
+                    continue;
+                }
                 currentList.add(num[i]);
 
                 backtrack(lists, currentList, num);

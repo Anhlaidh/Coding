@@ -27,10 +27,14 @@ public class hundred {
         //y = 25-7/4x
         //z=100-x-y
         for (int cock=0;cock<N/5;cock++){
-            if (7*cock%4!=0) continue;
+            if (7*cock%4!=0) {
+                continue;
+            }
             int hen = 25-(7*cock/4);
             int chick=100-hen-cock;
-            if (hen<0||chick%3!=0) continue;
+            if (hen<0||chick%3!=0) {
+                continue;
+            }
             if ((5*cock+hen*3+chick/3)==100) {
                 System.out.print("cock:"+cock);
                 System.out.print("hen:"+hen);

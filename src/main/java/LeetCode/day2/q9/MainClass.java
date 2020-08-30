@@ -11,7 +11,9 @@ import java.io.InputStreamReader;
  */
 class Solution {
     public boolean isPalindrome(int x) {
-        if (x < 0) return false;
+        if (x < 0) {
+            return false;
+        }
 //        String str = x+"";
 //        char[] chars = str.toCharArray();
 //        int j=chars.length-1;
@@ -29,7 +31,9 @@ class Solution {
         while (num != 0) {
             int left = num / div;
             int right = num % 10;
-            if (left != right) return false;
+            if (left != right) {
+                return false;
+            }
             num = (num - left * div) / 10;
             div /= 100;
         }

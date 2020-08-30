@@ -22,7 +22,9 @@ public class multiply {
         int current = 1;
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A.length; j++) {
-                if (j==i) continue;
+                if (j==i) {
+                    continue;
+                }
                 current *= A[j];
             }
 

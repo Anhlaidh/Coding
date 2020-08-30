@@ -30,21 +30,29 @@ public class MinN {
                     arr[left] = arr[right];
                     left++;
                     break;
-                } else right--;
+                } else {
+                    right--;
+                }
             }
             while (left != right) {//右数组
                 if (arr[left] > mid) {
                     arr[right] = arr[left];
                     right--;
                     break;
-                } else left++;
+                } else {
+                    left++;
+                }
             }
         }
         arr[left] = mid;//中值赋值
-        if (left==n-1) return arr[left];//跳出递归
+        if (left==n-1) {
+            return arr[left];//跳出递归
+        }
         if (left > n) {
             return min(Arrays.copyOfRange(arr, 0, left), n);
-        } else return min(Arrays.copyOfRange(arr, right+1, arr.length), n - left-1);
+        } else {
+            return min(Arrays.copyOfRange(arr, right+1, arr.length), n - left-1);
+        }
 
 
     }

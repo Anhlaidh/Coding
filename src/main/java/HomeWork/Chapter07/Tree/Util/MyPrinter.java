@@ -35,7 +35,9 @@ public class MyPrinter {
     }
 
     public static void treePrinter(Node root) {
-        if (root==null) System.out.println("null" );
+        if (root==null) {
+            System.out.println("null" );
+        }
         Queue<Node> queue = new LinkedList<>();
         queue.offer(root);
         while (queue != null) {

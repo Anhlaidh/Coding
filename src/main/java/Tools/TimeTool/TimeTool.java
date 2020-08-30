@@ -14,7 +14,9 @@ public class TimeTool {
         void execute();
     }
     public static void check(String title,Task task){
-        if (task==null) return;
+        if (task==null) {
+            return;
+        }
         title = (title==null)?"":("【"+title+"】");
         System.out.println(title);
         System.out.println("Start Time:"+fmt.format(new Date()));

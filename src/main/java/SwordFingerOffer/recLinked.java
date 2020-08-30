@@ -14,7 +14,9 @@ public class recLinked {
 
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         ArrayList list = new ArrayList();
-        if (listNode==null) return list;
+        if (listNode==null) {
+            return list;
+        }
         ArrayAdd(list, listNode);
         return list;
 

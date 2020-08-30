@@ -10,8 +10,9 @@ import java.util.Arrays;
  */
 public class factorial {
     BigInteger factorial(int[] arr){
-        if (arr.length<=1) return new BigInteger(arr[0]+"");
-        else {
+        if (arr.length<=1) {
+            return new BigInteger(arr[0]+"");
+        } else {
             int[] left = Arrays.copyOfRange(arr,0,arr.length/2);
             int[] right = Arrays.copyOfRange(arr,arr.length/2,arr.length);
             return factorial(left).multiply(factorial(right));

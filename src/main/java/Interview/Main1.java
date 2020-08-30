@@ -28,8 +28,11 @@ public class Main1 {
 
         }
         for (int i = result.length-1; i >=0; i--) {
-            if (result[i]) System.out.println("YES");
-            else System.out.println("NO");
+            if (result[i]) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
         }
 
     }
@@ -42,7 +45,9 @@ public class Main1 {
             if (a[index1] == b[index2]) {
                 index1++;
                 index2++;
-            }else break;
+            }else {
+                break;
+            }
         }
         if (index1 == a.length) {
             return true;

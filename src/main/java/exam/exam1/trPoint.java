@@ -28,7 +28,9 @@ public class trPoint {
                     break;
                 }
             }
-            if (flag) result.add(points[i]);
+            if (flag) {
+                result.add(points[i]);
+            }
         }
         for (int i = 0; i < result.size() ;i++) {
             point p = result.get(i);

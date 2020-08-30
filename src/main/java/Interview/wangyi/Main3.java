@@ -29,10 +29,14 @@ public class Main3 {
             int index = 0;
             while (index < list.size()) {
                 int aIndex = index + 1;
-                if (aIndex+1>list.size()) break;
+                if (aIndex+1>list.size()) {
+                    break;
+                }
                 int current = list.get(index);
                 int bIndex = list.lastIndexOf(current - list.get(aIndex));
-                if (bIndex>list.size()) break;
+                if (bIndex>list.size()) {
+                    break;
+                }
                 if (bIndex > 0 && aIndex != bIndex && aIndex != index && bIndex != index) {
 
                     list.remove(bIndex);

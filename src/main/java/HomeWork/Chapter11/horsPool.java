@@ -40,7 +40,9 @@ public class horsPool {
             } else {
                 int n = 0;
                 while (n <= pattern.length - 1) {
-                    if (pattern[pattern.length-n-1] ==str[end]) break;
+                    if (pattern[pattern.length-n-1] ==str[end]) {
+                        break;
+                    }
                     n++;
                 }
                 end += n;

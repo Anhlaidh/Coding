@@ -24,7 +24,9 @@ public class q1 {
     }
 
     private static int solution(int[] arr, int mans) {
-        if (mans<=0) return 0;
+        if (mans<=0) {
+            return 0;
+        }
 
         int most = arr.length - 1;
         int sum = 0;

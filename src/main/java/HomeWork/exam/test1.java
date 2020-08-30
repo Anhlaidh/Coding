@@ -23,10 +23,16 @@ public class test1 {
             if (T[i] == P.charAt(0)) {
                 int j = 1;
                 for (; j < m; j++) {
-                    if (i+j>n) break;
-                    if (T[i+j]!=P.charAt(j)) break;
+                    if (i+j>n) {
+                        break;
+                    }
+                    if (T[i+j]!=P.charAt(j)) {
+                        break;
+                    }
                 }
-                if (j==m) return i;
+                if (j==m) {
+                    return i;
+                }
             }
         }
         return 0;

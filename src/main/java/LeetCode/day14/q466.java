@@ -53,7 +53,9 @@ class solution1{
                 index++;
             }
             point1++;
-            if (point1==s1.length()) point1 = 0;
+            if (point1==s1.length()) {
+                point1 = 0;
+            }
             if (point2 == s2.length()) {
                 if (index == s2.length() * n2) {
                     count++;
@@ -74,7 +76,9 @@ class solution2{
         public static int getMaxRepetitions(String s1, int n1, String s2, int n2) {
         int s1Count = s1.length() * n1;
         int s2Count = s2.length() * n2;
-        if (s2Count>s1Count) return 0;
+        if (s2Count>s1Count) {
+            return 0;
+        }
         int index = 0;
         int s1Index = 0;
         int s2Index = 0;
@@ -90,7 +94,9 @@ class solution2{
             if (s2Index == s2.length()) {
                 s2Index = 0;
                 n++;
-                if (n==n2) break;
+                if (n==n2) {
+                    break;
+                }
             }
             index++;
             char c1 = s1.charAt(s1Index);
@@ -100,7 +106,9 @@ class solution2{
 
             }
             s1Index++;
-            if (s1Index==s1.length()) s1Index = 0;
+            if (s1Index==s1.length()) {
+                s1Index = 0;
+            }
 
 
 

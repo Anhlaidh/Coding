@@ -43,7 +43,9 @@ public class Main2 {
                 break;
             }
         }
-        if (mid>nums.length-1) return lists;
+        if (mid>nums.length-1) {
+            return lists;
+        }
         //三个均大于零,跳出循环 i<=mid
 //        for (int i = 0; i <= mid; i++) {
 //            if (i>1&&nums[i]==nums[i-1]) continue;

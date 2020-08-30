@@ -47,7 +47,9 @@ public class bagQuestion {
             for (item item:list){
                 weight+=item.weight;
                 value+=item.value;
-                if (weight>dp) break;
+                if (weight>dp) {
+                    break;
+                }
 
             }
             if (value>h_value&&weight<dp){
@@ -79,7 +81,9 @@ public class bagQuestion {
 
 
             for (;current<items.size();current++){
-                if (currentList.contains(items.get(current))) continue;
+                if (currentList.contains(items.get(current))) {
+                    continue;
+                }
                 currentList.add(items.get(current));
                 backtrack(items,currentList,lists,current);
 //                System.out.println(currentList);

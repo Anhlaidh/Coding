@@ -27,13 +27,27 @@ public class Main4 {
     }
 
     private static int solution(int[] builds, int i,int vector) {
-        if (i==0||i==builds.length-1) return 0;
-        if (builds[i]>=builds[i-1]) return 1;
-        if (builds[i]<builds[i-1]&&vector==-1) return 0;
-        if (builds[i]>=builds[i+1]) return 1;
-        if (builds[i]<builds[i+1]&&vector==1) return 0;
-        if (vector==-1) return solution(builds, i - 1, vector);
-        if (vector==1) return solution(builds, i + 1, vector);
+        if (i==0||i==builds.length-1) {
+            return 0;
+        }
+        if (builds[i]>=builds[i-1]) {
+            return 1;
+        }
+        if (builds[i]<builds[i-1]&&vector==-1) {
+            return 0;
+        }
+        if (builds[i]>=builds[i+1]) {
+            return 1;
+        }
+        if (builds[i]<builds[i+1]&&vector==1) {
+            return 0;
+        }
+        if (vector==-1) {
+            return solution(builds, i - 1, vector);
+        }
+        if (vector==1) {
+            return solution(builds, i + 1, vector);
+        }
          return solution(builds, i-1, -1)+solution(builds, i+1, 1);
 
 

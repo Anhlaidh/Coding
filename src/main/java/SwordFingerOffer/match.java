@@ -20,13 +20,17 @@ public class match {
     }
 
     public static boolean match(char[] str, char[] pattern) {
-        if (pattern.length==2&&pattern[0]=='.'&&pattern[1]=='*') return true;
+        if (pattern.length==2&&pattern[0]=='.'&&pattern[1]=='*') {
+            return true;
+        }
 
         int i = 0;
         int p = 0;
         if (str.length == 0&&pattern.length>=2) {
             for (int j = 1; j < pattern.length; j +=2) {
-                if (pattern.length%2!=0) return false;
+                if (pattern.length%2!=0) {
+                    return false;
+                }
                 if (pattern[j] != '*') {
                     return false;
                 }
@@ -36,7 +40,9 @@ public class match {
 
         }
         while (i<str.length){
-            if (p>=pattern.length) return false;
+            if (p>=pattern.length) {
+                return false;
+            }
 
             if (str[i] != pattern[p]) {
                 if (pattern[i] == '.') {
@@ -58,7 +64,9 @@ public class match {
                     char match = pattern[p];
                     int begin = i;
                     while (true) {
-                        if (str[begin]==pattern[p-1]&&i==str.length-1) return true;
+                        if (str[begin]==pattern[p-1]&&i==str.length-1) {
+                            return true;
+                        }
                         if (str[begin] == pattern[p-1] && str[i + 1] == pattern[p + 2]) {
                             p = p + 2;
                             break;
@@ -79,7 +87,9 @@ public class match {
             i++;
 
         }
-        if (p!=pattern.length) return false;
+        if (p!=pattern.length) {
+            return false;
+        }
         return true;
 
     }

@@ -22,7 +22,9 @@ public class sort {
             public void execute() {
                 int[] array =random.ints(30,0,100).toArray();//
 //                sort.QuickSort(array);
-                for (int a:sort.QuickSort(array)) System.out.println(a);
+                for (int a:sort.QuickSort(array)) {
+                    System.out.println(a);
+                }
             }
         });
         TimeTool.check("MergeSort", new TimeTool.Task() {

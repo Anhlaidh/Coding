@@ -36,14 +36,21 @@ public class ConvexHull extends position {
                 Vector vector = new Vector(points[i],points[j]);
                 List<Character> container = new ArrayList<>();
                 for (int k = 0;k<points.length;k++){
-                    if (k==i||k==j) continue;
+                    if (k==i||k==j) {
+                        continue;
+                    }
                     double v = (points[k].x * vector.a) + (vector.b * points[k].y);
-                    if (v <vector.c) container.add('-');
-                    else if (v>vector.c) container.add('+');
-                    else container.add(' ');
+                    if (v <vector.c) {
+                        container.add('-');
+                    } else if (v>vector.c) {
+                        container.add('+');
+                    } else {
+                        container.add(' ');
+                    }
                 }
-                if ((container.contains('+')&&container.contains('-')))  continue;
-                   else {
+                if ((container.contains('+')&&container.contains('-'))) {
+                    continue;
+                } else {
                     result.add(new Vector(points[i],points[j]));
                 }
             }
@@ -58,7 +65,9 @@ public class ConvexHull extends position {
         int current=0;
         int i=1;
         while (vectors.size()!=0){
-            if (i>vectors.size()-1) i=0;
+            if (i>vectors.size()-1) {
+                i=0;
+            }
 
             if (vectorList.get(current).end.equals(vectors.get(i).start)){
                 vectorList.add(vectors.get(i));
@@ -99,8 +108,11 @@ public class ConvexHull extends position {
                 System.out.println();
                 for (int i=0;i<sort.size();i++) {
 
-                    if (!(i==sort.size()-1)) System.out.print(sort.get(i).start + "->");
-                    else System.out.println(sort.get(i).start);
+                    if (!(i==sort.size()-1)) {
+                        System.out.print(sort.get(i).start + "->");
+                    } else {
+                        System.out.println(sort.get(i).start);
+                    }
                 }
             }
         });

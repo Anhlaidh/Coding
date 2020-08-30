@@ -39,7 +39,9 @@ public class meeting {
 
     private static int Search(int[] ints, int start,int key) {
         for (int i = start; i < ints.length; i++) {
-            if (ints[i]==key) return i;
+            if (ints[i]==key) {
+                return i;
+            }
         }
         return -1;
 

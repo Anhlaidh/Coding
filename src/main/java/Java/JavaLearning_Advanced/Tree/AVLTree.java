@@ -115,8 +115,12 @@ public class AVLTree<E> extends BST<E> {
         public Node<E> tallerChild() {
             int leftHeight = left==null?0:((AVLNode<E>)left).height;
             int rightHeight = right == null ? 0 : ((AVLNode<E>) right).height;
-            if (leftHeight > rightHeight) return left;
-            if (leftHeight < rightHeight)  return right;
+            if (leftHeight > rightHeight) {
+                return left;
+            }
+            if (leftHeight < rightHeight) {
+                return right;
+            }
             return isLeftChild() ? left : right;
 
         }

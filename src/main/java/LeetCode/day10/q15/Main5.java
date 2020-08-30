@@ -39,8 +39,12 @@ public class Main5 {
         for (int i = 0; i < nums.length-2;i++) {
             int p = i + 1;
             int j = nums.length - 1;
-            if (nums[i]>0) return lists;
-            if (i!=0&&nums[i]==nums[i-1]) continue;
+            if (nums[i]>0) {
+                return lists;
+            }
+            if (i!=0&&nums[i]==nums[i-1]) {
+                continue;
+            }
             while (p < j) {
                 if (nums[i] + nums[j] + nums[p]==0) {
                     addList(nums,i,j,p,lists);

@@ -13,8 +13,12 @@ public class Main {
 
     public static int clumsy(int N) {
         int result = N;
-        if (N==1) return 1;
-        if (N==2) return 2;
+        if (N==1) {
+            return 1;
+        }
+        if (N==2) {
+            return 2;
+        }
         if (N>=3){
             // N*(N-1) continue
             result = result * (--N);
@@ -26,9 +30,15 @@ public class Main {
         while (N > 0) {
             int temp = --N;
 
-            if (N>1) temp *= (--N);
-            if (N>1) temp /= --N;
-            if (N>1) result += --N;
+            if (N>1) {
+                temp *= (--N);
+            }
+            if (N>1) {
+                temp /= --N;
+            }
+            if (N>1) {
+                result += --N;
+            }
 
             result -= temp;
         }

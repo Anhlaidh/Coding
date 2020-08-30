@@ -21,9 +21,14 @@ public class doub {
                 }
             }
             for (int l = 0; l < str[i].length()-3; l++) {
-                if (str[i].charAt(l) != str[i].charAt(l + 1)) continue;
-                if (str[i].charAt(l+2)!=str[i].charAt(l+3)) continue;
-                else str[i].deleteCharAt(l + 2);
+                if (str[i].charAt(l) != str[i].charAt(l + 1)) {
+                    continue;
+                }
+                if (str[i].charAt(l+2)!=str[i].charAt(l+3)) {
+                    continue;
+                } else {
+                    str[i].deleteCharAt(l + 2);
+                }
 
             }
 

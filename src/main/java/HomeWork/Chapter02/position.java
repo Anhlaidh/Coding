@@ -25,8 +25,11 @@ public class position {
     static void show(boolean[][] map){
         for (int i = 0;i<map.length;i++){
             for (int j =0;j<map[i].length;j++){
-                if (!map[i][j]) System.out.print("-");
-                else System.out.print("o");
+                if (!map[i][j]) {
+                    System.out.print("-");
+                } else {
+                    System.out.print("o");
+                }
             }
             System.out.println();
         }
@@ -46,7 +49,9 @@ public class position {
         point point_B = new point();
         for (int i=0;i<points.length;i++){
             for (int j=i;j<points.length;j++){
-                if (i==j) continue;
+                if (i==j) {
+                    continue;
+                }
                 if (points[i].distanceFrom(points[j])<distance_min){
                     distance_min = points[i].distanceFrom(points[j]);
                    point_A = points[i];

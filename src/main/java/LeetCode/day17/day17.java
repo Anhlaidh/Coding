@@ -14,7 +14,9 @@ public class day17 {
     }
     static class Solution {
         public String longestCommonPrefix(String[] strs) {
-            if (strs.length==0) return "";
+            if (strs.length==0) {
+                return "";
+            }
             int shortest = Integer.MAX_VALUE;
             for (String s : strs) {
                 shortest = Math.min(s.length(), shortest);

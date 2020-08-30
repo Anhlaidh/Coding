@@ -2,6 +2,8 @@ package HomeWork.TimeTool;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * @Description: 计算时间
@@ -14,7 +16,9 @@ public class TimeTool {
         void execute();
     }
     public static void check(String title,Task task){
-        if (task==null) return;
+        if (task==null) {
+            return;
+        }
         title = (title==null)?"":("【"+title+"】");
         System.out.println(title);
         System.out.println("Start Time:"+fmt.format(new Date()));
@@ -26,4 +30,5 @@ public class TimeTool {
         System.out.println("Total:"+delta+"s");
         System.out.println("----------------------------------------------------");
     }
+
 }

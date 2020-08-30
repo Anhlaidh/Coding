@@ -19,15 +19,21 @@ public class refactorTree {
     }
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
 
-        if (pre.length==0&&in.length==0) return null;
+        if (pre.length==0&&in.length==0) {
+            return null;
+        }
 
         int root_val = pre[0];
         int root_index = 0;
         TreeNode node = new TreeNode(root_val);
 
-        if (pre.length==1&&in.length==1)return node;
+        if (pre.length==1&&in.length==1) {
+            return node;
+        }
         for (int i = 0; i < in.length; i++) {
-            if (in[i]==root_val) root_index = i;
+            if (in[i]==root_val) {
+                root_index = i;
+            }
         }
 
         int[] in_left = copy(in, 0, root_index);

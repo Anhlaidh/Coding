@@ -68,7 +68,9 @@ class Solution {
 //                }
 //            }
 //        }
-        if (nums==null||nums.length<=1) return res;
+        if (nums==null||nums.length<=1) {
+            return res;
+        }
         HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
         //一个key对应一个value，一个value可对应多个key，所以序号作为value，值作为key
         for (int i =0;i<nums.length;i++){
@@ -79,7 +81,9 @@ class Solution {
                 res[1]=map.get(val);
                 return res;
             }
-            else map.put(num,i);
+            else {
+                map.put(num,i);
+            }
         }
 
 

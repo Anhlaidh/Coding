@@ -25,8 +25,9 @@ public class q792 {
     }
 
     private void Merge(int[] array, int[] left, int[] right) {
-        if (left==null||right==null) array=array;
-        else {
+        if (left==null||right==null) {
+            array=array;
+        } else {
             int l=0;
             int r=0;
             int i=0;

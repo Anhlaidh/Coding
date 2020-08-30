@@ -27,7 +27,9 @@ public class Main {
                 str= str+k+"*";
                 n=n/k;
             }
-            else k++;
+            else {
+                k++;
+            }
         }
         System.out.println(str);
     }

@@ -13,22 +13,31 @@ import java.util.Arrays;
 public class position extends point{
 
     public static int xInstance(point[] points) {
-       if (points[0].x>points[1].x)return points[0].x-points[1].x;
-       else return points[1].x-points[0].x;
+       if (points[0].x>points[1].x) {
+           return points[0].x-points[1].x;
+       } else {
+           return points[1].x-points[0].x;
+       }
     }
 
     public static point[] minPosition(point[] points) {
-        if (points.length<=2) return points;
-       else {
+        if (points.length<=2) {
+            return points;
+        } else {
             point[] left = Arrays.copyOfRange(points, 0,points.length/2);
             point[] right;
             if (points.length%2==0) {
                 right = Arrays.copyOfRange(points, points.length/2,points.length );
-            }else right = Arrays.copyOfRange(points, points.length/2-1,points.length );
+            }else {
+                right = Arrays.copyOfRange(points, points.length/2-1,points.length );
+            }
             left = minPosition(left);
             right = minPosition(right);
-            if (xInstance(right)>xInstance(left)) return left;
-            else return right;
+            if (xInstance(right)>xInstance(left)) {
+                return left;
+            } else {
+                return right;
+            }
 
         }
 

@@ -15,11 +15,17 @@ public class Main {
         boolean flag = false;
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if (c !=' '&& i<str.length()-1&&!(str.charAt(i+1)>=48&&c<58)&&!(c>=48&&c<58)) return 0;
-            if (c ==' '|| c =='+'|| c =='-') continue;
+            if (c !=' '&& i<str.length()-1&&!(str.charAt(i+1)>=48&&c<58)&&!(c>=48&&c<58)) {
+                return 0;
+            }
+            if (c ==' '|| c =='+'|| c =='-') {
+                continue;
+            }
 
             if (c >= 48 && c < 58) {
-                if (i!=0&&str.charAt(i-1)=='-') flag = true;
+                if (i!=0&&str.charAt(i-1)=='-') {
+                    flag = true;
+                }
 
                 int temp = i;
                 while (i < str.length() && (str.charAt(i) < 58&& str.charAt(i) >=48)) {
@@ -32,15 +38,24 @@ public class Main {
                 for (int j = 0; j < chars.length; j++) {
                     value[j] = chars[j] - 48;
                     result = result * 10 + value[j];
-                    if (result/10>Integer.MAX_VALUE) break;
+                    if (result/10>Integer.MAX_VALUE) {
+                        break;
+                    }
                 }
                 break;
 
-            } else return 0;
+            } else {
+                return 0;
+            }
         }
-        if (flag) result= 0- result;
-        if (result<Integer.MIN_VALUE) result = Integer.MIN_VALUE;
-        else if (result>Integer.MAX_VALUE) return Integer.MAX_VALUE;
+        if (flag) {
+            result= 0- result;
+        }
+        if (result<Integer.MIN_VALUE) {
+            result = Integer.MIN_VALUE;
+        } else if (result>Integer.MAX_VALUE) {
+            return Integer.MAX_VALUE;
+        }
         return (int) result;
 
     }

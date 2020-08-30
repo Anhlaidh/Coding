@@ -36,7 +36,9 @@ public class BinaryTree<E> {
         inOrderTraversal(root,visitor);
     }
     private void inOrderTraversal(Node<E> node,Visitor<E> visitor) {
-        if (visitor==null||node==null) return;
+        if (visitor==null||node==null) {
+            return;
+        }
         inOrderTraversal(node.left,visitor);
         visitor.visit(node.element);
         inOrderTraversal(node.right,visitor);
@@ -49,7 +51,9 @@ public class BinaryTree<E> {
         preOrderTraversal(root,visitor);
     }
     private void preOrderTraversal(Node<E> node,Visitor<E> visitor) {
-        if (visitor==null||node==null) return;
+        if (visitor==null||node==null) {
+            return;
+        }
         visitor.visit(node.element);
         preOrderTraversal(node.left,visitor);
         preOrderTraversal(node.right,visitor);
@@ -62,7 +66,9 @@ public class BinaryTree<E> {
         postOderTraversal(root,visitor);
     }
     private void postOderTraversal(Node<E> node,Visitor<E> visitor) {
-        if (visitor==null||node==null) return;
+        if (visitor==null||node==null) {
+            return;
+        }
         postOderTraversal(node.left,visitor);
         postOderTraversal(node.right,visitor);
         visitor.visit(node.element);
@@ -72,7 +78,9 @@ public class BinaryTree<E> {
      *
      * */
     public void levelOrderTraversal(Visitor visitor) {
-        if (root==null) return;
+        if (root==null) {
+            return;
+        }
         Queue<Node<E>> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
@@ -88,7 +96,9 @@ public class BinaryTree<E> {
         }
     }
     private Node<E> predecessor(Node<E> node) {
-        if (node==null) return null;
+        if (node==null) {
+            return null;
+        }
         //前驱节点在左子树中
         Node<E> p = node.left;
         if (p != null) {
@@ -104,7 +114,9 @@ public class BinaryTree<E> {
         return node.parent;
     }
     protected Node<E> successor(Node<E> node) {
-        if (node==null) return null;
+        if (node==null) {
+            return null;
+        }
         //前驱节点在左子树中
         Node<E> p = node.right;
         if (p != null) {
@@ -136,7 +148,9 @@ public class BinaryTree<E> {
 
     }
     public boolean isComplete() {
-        if (root==null) return false;
+        if (root==null) {
+            return false;
+        }
         Queue<Node<E>> queue = new LinkedList<>();
         queue.add(root);
         boolean leaf = false;
@@ -172,7 +186,9 @@ public class BinaryTree<E> {
 
         @Override
         public String toString() {
-            if (parent==null) return element+"";
+            if (parent==null) {
+                return element+"";
+            }
             return element + "_P(" + parent.element + ")";
         }
 

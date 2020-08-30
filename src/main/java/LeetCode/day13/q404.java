@@ -24,10 +24,18 @@ public class q404 {
     }
     public static int sumOfLeftLeaves(TreeNode root) {
         int result = 0;
-        if (root==null) return 0;
-        if (root.left!=null) result += sumOfLeftLeaves(root.left);
-        if (root.right!=null) result += sumOfLeftLeaves(root.right);
-        if(root.left!=null&&root.left.left==null&&root.left.right==null) result += root.left.val;
+        if (root==null) {
+            return 0;
+        }
+        if (root.left!=null) {
+            result += sumOfLeftLeaves(root.left);
+        }
+        if (root.right!=null) {
+            result += sumOfLeftLeaves(root.right);
+        }
+        if(root.left!=null&&root.left.left==null&&root.left.right==null) {
+            result += root.left.val;
+        }
         return result;
     }
 

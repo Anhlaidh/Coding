@@ -3,6 +3,7 @@ package Java.JavaLearning_Advanced.thread.Fork_Join;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
+import java.util.concurrent.Future;
 
 /**
  * @Description:
@@ -16,7 +17,10 @@ public class SumTest {
         //创建任务
         SumTask task = new SumTask(1,1000000);
         //提交任务
-        ForkJoinTask<Long> result = pool.submit(task);
+       /*1*/ ForkJoinTask<Long> result = pool.submit(task);
+/*     2   Future<Long> result = pool.submit(task); */
+        /*3pool.execute(task);
+        long result = task.join();*/
         //等待结果
         do {
             System.out.printf("Main:Thread Count:%d\n", pool.getActiveThreadCount());
@@ -27,8 +31,9 @@ public class SumTest {
                 e.printStackTrace();
             }
         } while (!task.isDone());
-        //输出结果
+//        输出结果
         System.out.println(result.get().toString());
+        System.out.println(result);
 
     }
 }

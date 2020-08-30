@@ -12,7 +12,9 @@ import java.io.InputStreamReader;
 class Solution {
     public String convert(String s, int numRows) {
     StringBuilder[] sb = new StringBuilder[numRows];
-    for (int i =0;i<sb.length;i++) sb[i] = new StringBuilder();
+    for (int i =0;i<sb.length;i++) {
+        sb[i] = new StringBuilder();
+    }
     char[] chars = s.toCharArray();
     int i=0;
     while (i<chars.length){

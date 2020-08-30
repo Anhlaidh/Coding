@@ -20,15 +20,18 @@ public class SortImpl implements ISort {
      */
     @Override
     public int[] QuickSort(int[] array) {
-        if (array.length<=1) return array;
+        if (array.length<=1) {
+            return array;
+        }
         int mid = array[0];
         int left=1;
         int current=0;
         int right=array.length-1;
        while (left!=right){
            while (left!=right){
-               if (array[right]>=mid) right--;
-               else {
+               if (array[right]>=mid) {
+                   right--;
+               } else {
                    array[current] = array[right];
                    current = right;
                    right--;
@@ -37,8 +40,9 @@ public class SortImpl implements ISort {
            }
           while (left!=right){
 
-              if (array[left]<mid) left++;
-              else {
+              if (array[left]<mid) {
+                  left++;
+              } else {
                   array[current] = array[left];
                   current = left;
                   left++;
@@ -82,8 +86,9 @@ public class SortImpl implements ISort {
     }
 
     private void Merge(int[] array, int[] left, int[] right) {
-        if (left==null||right==null) array=array;
-        else {
+        if (left==null||right==null) {
+            array=array;
+        } else {
            int l=0;
            int r=0;
            int i=0;

@@ -70,7 +70,9 @@ public class BST<E> extends BinaryTree implements IBinarySearchTree<E> {
     }
 
     private void remove(Node<E> node) {
-        if (node==null) return;
+        if (node==null) {
+            return;
+        }
         size--;
         //度为2的节点
         if (node.hasTwoChildren()) {
@@ -117,7 +119,9 @@ public class BST<E> extends BinaryTree implements IBinarySearchTree<E> {
             if (cmp < 0) {
                 p = p.left;
             }
-            if (cmp==0) return p;
+            if (cmp==0) {
+                return p;
+            }
             if (cmp > 0) {
                 p = p.right;
             }

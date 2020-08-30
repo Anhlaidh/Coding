@@ -19,7 +19,9 @@ public class Repeat {
         SortImpl sort = new SortImpl();
         sort.MergeSort(arr);
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i]==arr[i-1]) return true;
+            if (arr[i]==arr[i-1]) {
+                return true;
+            }
         }
         return false;
 

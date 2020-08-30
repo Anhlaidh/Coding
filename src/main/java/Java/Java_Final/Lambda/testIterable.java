@@ -26,7 +26,7 @@ public class testIterable<T> {
         }
         Integer test = test(Math::abs, 1);
         System.out.println(test);
-        parsInt(Integer::parseInt, "aaa");
+//        parsInt(Integer::parseInt, "aaa");
 
     }
 

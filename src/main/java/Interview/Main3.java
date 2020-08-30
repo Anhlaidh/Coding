@@ -37,7 +37,9 @@ public class Main3 {
 
 
             for (int j = 0; j < offs.length; j++) {
-                if (costs[i]>=offs[j]) off = offs[j];
+                if (costs[i]>=offs[j]) {
+                    off = offs[j];
+                }
 
 
             }
@@ -48,14 +50,20 @@ public class Main3 {
     }
 
     private static int findOff(int cost, int[] offs,int current) {
-        if (cost==offs[current]) return offs[current];
+        if (cost==offs[current]) {
+            return offs[current];
+        }
         if (cost > offs[current]) {
-            if (current==offs.length-1) return offs[current];
+            if (current==offs.length-1) {
+                return offs[current];
+            }
             findOff(cost, offs, (current + offs.length) / 2);
 
         }
         if (cost < offs[current]) {
-            if (current==0) return 0;
+            if (current==0) {
+                return 0;
+            }
 
         }
         return 0;

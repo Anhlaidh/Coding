@@ -66,8 +66,12 @@ public static List<List<Integer>> threeSum(int[] nums) {
                 Collections.sort(current);
 
                 for (int j = 0; j < target.size(); j++) {
-                    if (!target.get(j).equals(current.get(j))) break;
-                    if (j==target.size()-1&&target.get(j).equals(current.get(j))) return true;
+                    if (!target.get(j).equals(current.get(j))) {
+                        break;
+                    }
+                    if (j==target.size()-1&&target.get(j).equals(current.get(j))) {
+                        return true;
+                    }
                 }
 
 
@@ -95,7 +99,9 @@ public static List<List<Integer>> threeSum(int[] nums) {
 //        }
 //        return false;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i]==target)return true;
+            if (nums[i]==target) {
+                return true;
+            }
         }
         return false;
 

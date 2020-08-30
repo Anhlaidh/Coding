@@ -17,7 +17,9 @@ public class homeWork_01 {
         return B;
     }
      static int gcd_rec(int f,int s){
-        if (s>0) return gcd_cir(s,f%s);
+        if (s>0) {
+            return gcd_cir(s,f%s);
+        }
         return f;
     }
     //2 3 7 10 13
@@ -25,7 +27,9 @@ public class homeWork_01 {
 
 
     static int gcd(int A,int B){
-         if (A==1||B==1) return 1;
+         if (A==1||B==1) {
+             return 1;
+         }
         int[] a = prime(Math.max(A,B));
         int[] b = prime(Math.min(A,B));
 
@@ -41,7 +45,9 @@ public class homeWork_01 {
         }
         int res = 1;
         for (int i=0;i<temp.length;i++){
-           if (temp[i]!=0) res*=temp[i];
+           if (temp[i]!=0) {
+               res*=temp[i];
+           }
         }
          return res;
     }
@@ -57,7 +63,9 @@ public class homeWork_01 {
                  str= str+k+" ";
                  n=n/k;
              }
-             else k++;
+             else {
+                 k++;
+             }
          }
 //        System.out.println(str);
         String[] s =  str.split(" ");
@@ -69,7 +77,9 @@ public class homeWork_01 {
     }
     static int doTest(int A,int B){
          for (int i =Math.min(A, B);i>=0;i--){
-             if (A%i==0&&B%i==0) return i;
+             if (A%i==0&&B%i==0) {
+                 return i;
+             }
          }
          return 0;
     }
@@ -131,7 +141,9 @@ public class homeWork_01 {
                 str= str+k+"*";
                 n=n/k;
             }
-            else k++;
+            else {
+                k++;
+            }
         }
         System.out.println(str);
     }

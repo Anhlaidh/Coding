@@ -58,7 +58,9 @@ public class max {
         }
         else {
             for (;current<items.size();current++){
-                if (currentList.contains(items.get(current))) continue;
+                if (currentList.contains(items.get(current))) {
+                    continue;
+                }
                 currentList.add(items.get(current));
                 backtrack(items,currentList,lists,current);
 //                System.out.println(currentList);

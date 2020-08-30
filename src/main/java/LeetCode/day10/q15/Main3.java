@@ -43,7 +43,9 @@ public class Main3 {
                     if (nums[i + 1] == 0) {
                         if (nums[i - 1] == 0) {
                             mid = i;
-                        }else mid = i + 1;
+                        }else {
+                            mid = i + 1;
+                        }
                     } else {
                         mid = i;
                     }
@@ -59,13 +61,17 @@ public class Main3 {
                 break;
             }
         }
-        if (mid>nums.length-1) return lists;
+        if (mid>nums.length-1) {
+            return lists;
+        }
         for (int i = 0; i < mid; i++) {
             for (int j = nums.length-1; j >=mid; j--) {
                 if (nums[i] + nums[j] > 0) {
                     //从mid向左寻找,直到三数之和小于零
                     for (int p = mid;p>i; p--) {
-                        if (p==j) continue;
+                        if (p==j) {
+                            continue;
+                        }
                         addList(nums,i,j,p,lists,difference);
                     }
 
@@ -78,7 +84,9 @@ public class Main3 {
 
                 } else {
                     if (nums[mid] == 0) {
-                        if (mid==j) continue;
+                        if (mid==j) {
+                            continue;
+                        }
                         addList(nums, i, j, mid, lists, difference);
                     }
                 }

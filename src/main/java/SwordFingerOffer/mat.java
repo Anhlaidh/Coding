@@ -12,7 +12,9 @@ public class mat {
         System.out.println(match(str, pattern));
     }
     public static boolean match(char[] str, char[] pattern) {
-        if (pattern.length==2&&pattern[0]=='.'&&pattern[1]=='*' ) return true;
+        if (pattern.length==2&&pattern[0]=='.'&&pattern[1]=='*' ) {
+            return true;
+        }
         int i = 0;
         int j = 0;
 
@@ -42,7 +44,9 @@ public class mat {
                     }
                 }
                 return true;
-            } else return false;
+            } else {
+                return false;
+            }
         }
         //当pattern的下一个字符为*时
         if (index2 < pattern.length - 1 && pattern[index2 + 1] == '*') {
