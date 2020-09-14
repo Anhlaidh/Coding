@@ -22,6 +22,7 @@ public class testEnum {
             //输出索引值
             System.out.println(item.toString() + "," + item.ordinal());
         }
+
     }
 
     enum Day {

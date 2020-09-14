@@ -1,4 +1,4 @@
-package Interview.tencent;
+package Interview.tencent.f;
 
 import java.util.Scanner;
 

@@ -19,7 +19,8 @@ public class Heap {
         arr[heapSize] = i;
         int child = heapSize;
 
-        int father = (child-1)/2;
+        int father = (child - 1) / 2;
+        //循环与父节点判断大小,保证子节点小于父节点
         while (arr[child]>arr[father]) {
             swap(arr, child, father);
             child = father;
@@ -39,17 +40,21 @@ public class Heap {
             return 0;
         }
         int ret = arr[0];
+        //将最后一个节点放入头节点
         arr[0] = arr[--heapSize];
+        //下沉这个节点
         heapify(arr, 0, heapSize);
         return ret;
     }
-
+    // 下沉
     static void heapify(int[] arr,int index, int heapSize) {
         int left = index * 2 + 1;
         int largest;
+        //如果index节点小于孩子则下沉,直到没有左孩子
         while (left < heapSize) {
             largest = (left + 1 < heapSize) && (arr[left + 1] > arr[left]) ? left + 1 : left;
             largest = arr[largest] > arr[index] ? largest : index;
+            //当前的节点如果比两个孩子节点大,跳出
             if (largest == index) {
                 break;
             }

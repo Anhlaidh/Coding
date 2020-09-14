@@ -4,6 +4,7 @@ import HomeWork.Chapter07.Tree.Util.TreePrinter;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Random;
 
 /**
  * @Description:
@@ -26,6 +27,49 @@ public class BinaryTree<E> {
         size = 0;
         root = null;
 
+    }
+
+    public static BinaryTree<Integer> getDefault(int bound,int MaxSize) {
+        Random random = new Random();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
+        Integer[] orderTraversal = random.ints(MaxSize, -1, bound).boxed().toArray(Integer[]::new);
+        Node<Integer> root = binaryTree.createTree(orderTraversal, 0);
+        binaryTree.root = root;
+        binaryTree.unSafeLevelOrderTraversal(new unSafeVisitor<Integer>() {
+
+            @Override
+            public void visit(Node<Integer> node) {
+                if (node.left!=null&&node.left.element == -1) {
+
+                    node.left = null;
+                }
+                if (node.right!=null&&node.right.element == -1) {
+                    node.right = null;
+                }
+            }
+        });
+
+
+
+        return binaryTree;
+    }
+
+    private Node<E> createTree(E[] traversal,int index) {
+        Node<E> cur = new Node<>(traversal[index]);
+
+        Node<E> left = null;
+        Node<E> right = null;
+        if (index * 2 + 1 < traversal.length) {
+            left = createTree(traversal, 2 * index+1);
+        }
+        if (index * 2 + 2 < traversal.length) {
+            right = createTree(traversal, 2 * index + 2);
+        }
+        cur.left = left;
+        cur.right = right;
+        if (left!=null) left.parent = cur;
+        if (right!=null) right.parent = cur;
+        return cur;
     }
     /*
      * 中序遍历
@@ -77,6 +121,24 @@ public class BinaryTree<E> {
      * 层序遍历
      *
      * */
+    public void unSafeLevelOrderTraversal(unSafeVisitor visitor) {
+        if (root==null) {
+            return;
+        }
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            Node<E> node = queue.poll();
+            visitor.visit(node);
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+
+        }
+    }
     public void levelOrderTraversal(Visitor visitor) {
         if (root==null) {
             return;
@@ -173,15 +235,20 @@ public class BinaryTree<E> {
         }
         return true;
     }
-    protected static class Node<E> implements TreePrinter.PrintableNode {
+    public static class Node<E> implements TreePrinter.PrintableNode {
         E element;
-        Node<E> left;
-        Node<E> right;
+        public Node<E> left;
+        public Node<E> right;
         Node<E> parent;
 
         public Node(E element, Node<E> parent) {
             this.element = element;
             this.parent = parent;
+        }
+
+        //要手动孩子指向父亲
+        public Node(E element) {
+            this.element = element;
         }
 
         @Override
@@ -225,6 +292,10 @@ public class BinaryTree<E> {
     }
     public interface Visitor<E> {
         void visit(E element);
+    }
+
+    public interface unSafeVisitor<E> {
+        void visit(Node<E> node);
     }
 
     protected Node<E> createNode(E element, Node<E> parent) {
