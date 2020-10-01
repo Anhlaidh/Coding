@@ -23,7 +23,7 @@ public class testWrite {
         //三者关系bufferedWriter(OutputStreamWriter(FIleOutputStream)))
 
         try {
-            fileOutputStream = new FileOutputStream("./temp/abc.txt");
+            fileOutputStream = new FileOutputStream("G:\\Coding\\a.txt");
             outputStreamWriter = new OutputStreamWriter(fileOutputStream, "UTF-8");
             bufferedWriter = new BufferedWriter(outputStreamWriter);
 //            bufferedReader = new BufferedReader(new OutputStreamWriter(new FileOutputStream("./temp.abc")));
@@ -46,7 +46,7 @@ public class testWrite {
 
     public static void method_2() {
         //try-resource语句,自动关闭资源
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("./temp/abc.txt")))) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("G:\\Coding\\a.txt")))) {
             bufferedWriter.write("我们是");
             bufferedWriter.newLine();
             bufferedWriter.write("method_2");

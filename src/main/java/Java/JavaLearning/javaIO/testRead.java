@@ -22,7 +22,7 @@ public class testRead {
         BufferedReader bufferedReader = null;
         String line = "";
         try {
-            fileInputStream = new FileInputStream("./temp/abc.txt");
+            fileInputStream = new FileInputStream("G:\\Coding\\a.txt");
             inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");
             bufferedReader = new BufferedReader(inputStreamReader);
 //            bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("./temp/abc.txt")));
@@ -42,7 +42,7 @@ public class testRead {
     }
 
     public static void method_2() {
-        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("./temp/abc.txt")))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("G:\\Coding\\a.txt")))) {
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
