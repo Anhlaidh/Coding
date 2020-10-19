@@ -12,14 +12,14 @@ import java.net.Socket;
 public class TcpClient {
     public static void main(String[] args) {
         try {
-            Socket socket = new Socket(InetAddress.getByName("192.168.1.111"), 9999 );
+            Socket socket = new Socket(InetAddress.getByName("127.0.0.1"), 9999 );
             // 同一个通道，服务端输出流就是客户端的输入流，服务端的输入流，就是客户端的输出流
             InputStream inputStream = socket.getInputStream();//开启通道的输入流
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             OutputStream outputStream = socket.getOutputStream();//开启通道的输出流
             DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
             BufferedReader brKey = new BufferedReader(new InputStreamReader(System.in));
-            dataOutputStream.writeUTF("aaa.txt");
+//            dataOutputStream.writeUTF("aaa.txt");
             while (true) {
                 String strWord = brKey.readLine();
                 if (strWord.equalsIgnoreCase("quit")) {
