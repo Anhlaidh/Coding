@@ -14,30 +14,62 @@ import java.util.Stack;
  */
 public class q129 {
     public static void main(String[] args) {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(2);
-        TreeNode t3 = new TreeNode(3);
+        TreeNode t1 = new TreeNode(4);
+        TreeNode t2 = new TreeNode(9);
+        TreeNode t3 = new TreeNode(0);
+        TreeNode t4 = new TreeNode(5);
+        TreeNode t5 = new TreeNode(1);
 
 
         t1.left = t2;
         t1.right = t3;
+        t2.left = t4;
+        t2.right = t5;
 
-        sumNumbers(t1);
+        System.out.println(sumNumbers(t1));
     }
+    //递归
 
     public static int sumNumbers(TreeNode root) {
         if (root==null) return 0;
-        ArrayList<int[]> dfs = DFS(root);
+//        ArrayList<int[]> dfs = DFS(root);
+        ArrayList<String > res = Recursion(root);
         int sum = 0;
-        for (int i = 0; i < dfs.size(); i++) {
-            int[] cur = dfs.get(i);
-            StringBuilder str = new StringBuilder();
-            for (int j = 0; j < cur.length; j++) {
-                str.append(cur[j]);
-            }
-            sum += Integer.parseInt(str.toString());
+//        for (int i = 0; i < dfs.size(); i++) {
+//            int[] cur = dfs.get(i);
+//            StringBuilder str = new StringBuilder();
+//            for (int j = 0; j < cur.length; j++) {
+//                str.append(cur[j]);
+//            }
+//            sum += Integer.parseInt(str.toString());
+//        }
+        for (int i = 0; i < res.size(); i++) {
+            sum += Integer.parseInt(res.get(i));
         }
         return sum;
+    }
+
+    private static ArrayList<String > Recursion(TreeNode root) {
+        ArrayList<String> list = new ArrayList<>();
+        StringBuilder str = new StringBuilder();
+        process(root, list,str.append(root.val));
+        return list;
+    }
+
+    private static void process(TreeNode root, ArrayList<String> list,StringBuilder str) {
+        if (root.left == null&&root.right==null) {
+            list.add(str.toString());
+            return;
+        }
+        if (root.left != null) {
+            process(root.left, list, str.append(root.left.val));
+            str.deleteCharAt(str.length()-1);
+        }
+        if (root.right != null) {
+            process(root.right,list, str.append(root.right.val));
+            str.deleteCharAt(str.length()-1);
+        }
+
     }
 
     private static ArrayList<int[]> DFS(TreeNode root) {
